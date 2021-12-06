@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import SideBar from '../sidebar/Side-Bar';
 import SideBarOverlay from '../sidebar/Side-Bar-Overlay';
 import Header from '../header/Header';
@@ -9,10 +10,14 @@ import '../../styles/base.less';
 import './Structure.less';
 
 
-export default function Structure(props) {
+
+
+export default function Structure({children}) {
     return (
         <>
-        
+        <Helmet>
+            <title>Seblad - Keramik</title>
+        </Helmet>
         <div id="wrapper">
             <SideBar type="left">
                 <MainNavigation type="vertical"/>
@@ -25,7 +30,7 @@ export default function Structure(props) {
                 <Header/>
                 <MainNavigation type="horizontal"/>
                 <Content>
-                    {props.children}
+                    {children}
                 </Content>
                 <Footer/>
             </div>

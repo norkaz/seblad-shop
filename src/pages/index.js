@@ -7,7 +7,7 @@ export default function Home() {
     <Structure>
       <section>
         <p>
-          Irure sint ad cupidatat quis pariatur consequat. Officia esse laboris cupidatat mollit Lorem nulla aliqua voluptate sit cillum dolore. Aliqua minim et excepteur culpa velit laboris nostrud sint irure eiusmod occaecat et.
+          Irure sint ad cupidatat quis pariatur consequat. <a href="/contact">Kontakta mig!</a> Officia esse laboris cupidatat mollit Lorem nulla aliqua voluptate sit cillum dolore. Aliqua minim et excepteur culpa velit laboris nostrud sint irure eiusmod occaecat et.
         </p>
         <p>
           Esse eu dolore velit do aliqua. Et dolor consequat dolor magna in ex ea qui. Adipisicing eu nulla cupidatat sint officia sint aliquip tempor incididunt proident magna occaecat. Laboris laborum veniam tempor velit mollit irure fugiat adipisicing enim nulla sit eu consectetur ipsum. Mollit consequat reprehenderit est consequat sunt sunt commodo id minim deserunt sint deserunt.

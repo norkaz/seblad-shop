@@ -9,18 +9,7 @@ export default function MainNavigation(props) {
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/content/about">About</Link></li>
                 <li><Link to="/contact">Contact</Link></li>
-                <li><Link to="/dwadwadsadwad">404</Link></li>
-                <li><Link to="/dwadwadsadwad">404</Link></li>
-                <li><Link to="/dwadwadsadwad">404</Link></li>
-                <li><Link to="/dwadwadsadwad">404</Link></li>
-                <li><Link to="/dwadwadsadwad">404</Link></li>
-                <li><Link to="/dwadwadsadwad">404</Link></li>
-                <li><Link to="/dwadwadsadwad">404</Link></li>
-                <li><Link to="/dwadwadsadwad">404</Link></li>
-                <li><Link to="/dwadwadsadwad">404</Link></li>
-                <li><Link to="/dwadwadsadwad">404</Link></li>
-                <li><Link to="/dwadwadsadwad">404</Link></li>
-                <li><Link to="/dwadwadsadwad">404</Link></li>
+                <li><Link to="/error">404</Link></li>
             </ul>
         </nav>
     )
