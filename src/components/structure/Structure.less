@@ -1,0 +1,28 @@
+@import '../../styles/variables.less';
+
+#wrapper {
+    height: 100%;
+    .pro-sidebar {
+        position: fixed;
+    }
+}
+#main {
+    background: @backgroundColor;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    .navigation {
+        @media screen and (max-width: @breakPointFirst) and (min-width: @breakPointSecond) {
+           
+        }
+        @media screen and (max-width: @breakPointSecond) and (min-width: @breakPointThird) {
+        
+        }
+        @media screen and (max-width: @breakPointThird) {
+            // display: none;
+        }
+    }
+}
+
+

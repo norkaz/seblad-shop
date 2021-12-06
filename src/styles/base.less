@@ -1,0 +1,58 @@
+@import './variables.less';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500&display=swap');
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: @defaultFont;
+    font-weight: @defaultFontWeight;
+    background: @backgroundColor;
+    margin:0;
+    font-size: 1rem;
+    overflow-x: hidden;
+    height: 100%;
+    #___gatsby {
+        height: 100%;
+        > div {
+            height: 100%;
+        }
+    }
+}        
+p a {
+    color: var(--linkColor);
+    
+}
+
+a {
+    color: var(--textColor);
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+p{
+    line-height: 140%;
+}
+
+
+:root {
+    // general
+    --fontSize: @fontSize;
+    font-size: var(--fontSize);
+    // color
+    --textColor: @textColor;
+    --linkColor: @linkColor;
+    --primaryColor: #f09;
+    --secondaryColor: #039;
+    // sizes
+
+    // others
+    // header
+    --headerBackgroundColor: @headerBackgroundColor;
+    --headerTextColor: @headerTextColor;
+}

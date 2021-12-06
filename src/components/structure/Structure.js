@@ -1,0 +1,35 @@
+import React from 'react';
+import SideBar from '../sidebar/Side-Bar';
+import SideBarOverlay from '../sidebar/Side-Bar-Overlay';
+import Header from '../header/Header';
+import MainNavigation from '../navigations/mainNavigation/Main-Navigation';
+import Content from '../content/Content';
+import Footer from '../footer/Footer';
+import '../../styles/base.less';
+import './Structure.less';
+
+
+export default function Structure(props) {
+    return (
+        <>
+        
+        <div id="wrapper">
+            <SideBar type="left">
+                <MainNavigation type="vertical"/>
+            </SideBar> 
+            <SideBar type="right">
+                <MainNavigation type="vertical"/>
+            </SideBar> 
+            <SideBarOverlay/>
+            <div id="main">        
+                <Header/>
+                <MainNavigation type="horizontal"/>
+                <Content>
+                    {props.children}
+                </Content>
+                <Footer/>
+            </div>
+        </div>
+        </>
+    )
+}
