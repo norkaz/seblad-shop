@@ -8,7 +8,7 @@ export default function About() {
         <Structure>
             <Grid col="2">
                 <Column col="1">
-                    content
+                    Is it working now?
                 </Column>
                 <Column col="1">
                     <h1>Seblad keramik</h1>
