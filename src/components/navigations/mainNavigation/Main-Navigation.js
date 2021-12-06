@@ -8,7 +8,7 @@ export default function MainNavigation(props) {
             <ul className={props.type}>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/content/about">About</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
+                <li><Link to="/content/contact">Contact</Link></li>
                 <li><Link to="/error">404</Link></li>
             </ul>
         </nav>

@@ -2,15 +2,22 @@ import React from 'react'
 import Structure from '../../components/structure/Structure'
 import Grid from '../../components/controls/grid/Grid'
 import Column from '../../components/controls/grid/column/Column'
+import Img from '../../components/controls/img/Img'
+import image from '../../../static/img/content/about.jpg';
 
 export default function About() {
     return (
         <Structure>
-            <Grid col="2">
-                <Column col="1">
-                    Is it working now? Checking out on develop
+            <Grid gap="40px">
+                <Column>
+                    <Img 
+                    background={image} 
+                    src={image}
+                    header="My picture" 
+                    alt="Bild" 
+                    />
                 </Column>
-                <Column col="1">
+                <Column>
                     <h1>Seblad keramik</h1>
                     <p>
                         Nils Seblad började dreja för över 35 år sen och har sedan dess ägnat all sin lediga tid åt keramiken. Han har bland annat gått två konstnärliga utbildningar på Nyckelviksskolan och Gerlesborgsskolan, byggt fem specialdesignade keramikverkstäder, drejat miljontals föremål, testat tusentals kombinationer av glasyrer och blev nu i år klar med sin 10 kvm stora vedeldade keramikugn.

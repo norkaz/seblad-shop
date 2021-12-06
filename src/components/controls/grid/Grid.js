@@ -3,7 +3,7 @@ import './Grid.less'
 
 export default function Grid(props) {
     return (
-        <div className={`grid ${props.col}`}>
+        <div className={props.type ? props.type + 'grid' : 'grid'} style={{gap: props.gap, padding: props.gap}}>
             {props.children}
         </div>
     )

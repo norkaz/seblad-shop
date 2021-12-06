@@ -17,7 +17,7 @@ export default function ShopWindow(props) {
                     <a href={'/article/' + data.name}>
                         <div className="border-wrapper">
                             <div className="image" style={{
-                                backgroundImage: "url(` + `/img/products/articlenumbers/` + data.artNr + `.jpg` + `)"}}>
+                                backgroundImage: `url(/img/products/articlenumbers/` + data.artNr + `.jpg)`}}>
                                 {savingPrice ? <span className="badge">{data.discountPercent} %</span>: ''}
                                 <img src={'/img/products/articlenumbers/' + data.artNr + '.jpg'} alt={data.name} width="400" height="400"/>
                             </div>
