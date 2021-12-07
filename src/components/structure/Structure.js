@@ -19,13 +19,6 @@ export default function Structure({children}) {
             <title>Seblad - Keramik</title>
         </Helmet>
         <div id="wrapper">
-            <SideBar type="left">
-                <MainNavigation type="vertical"/>
-            </SideBar> 
-            <SideBar type="right">
-                <MainNavigation type="vertical"/>
-            </SideBar> 
-            <SideBarOverlay/>
             <div id="main">        
                 <Header/>
                 <MainNavigation type="horizontal"/>
@@ -34,6 +27,13 @@ export default function Structure({children}) {
                 </Content>
                 <Footer/>
             </div>
+            <SideBar type="left">
+                <MainNavigation type="vertical"/>
+            </SideBar> 
+            {/* <SideBar type="right">
+                <MainNavigation type="vertical"/>
+            </SideBar>  */}
+            <SideBarOverlay/>
         </div>
         </>
     )
