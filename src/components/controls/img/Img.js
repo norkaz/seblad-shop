@@ -3,7 +3,7 @@ import './Img.less';
 
 export default function Img(props) {
     return (
-        <div class="resp-img" style={{backgroundImage: 'url(' + props.background + ')'}}>
+        <div className="resp-img" style={{backgroundImage: 'url(' + props.background + ')'}}>
             {props.header ? 
                <span className="splash-header">
                    {props.header}
