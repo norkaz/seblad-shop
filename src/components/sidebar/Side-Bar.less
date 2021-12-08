@@ -2,18 +2,17 @@
 
 .sidebar {
     position: absolute;
-    width: 90vw;
-    max-width: 450px;
-    height: 100vh;
-    top: auto;
-    left: auto;
-    right: auto;
-    bottom: auto;
-    background: #FFF;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: @navbarBackgroundColor;
+    z-index: 101;
     transition: ease all 0.3s;
+    transform: translateY(-100%);
 
     &.open {
         z-index: 101;
+        transform: translateY(100%);
     }
 
     .sidebar-container {
@@ -21,42 +20,16 @@
         width: 100%;
         overflow-y: auto;
         .close-btn {
-            position: absolute;    
-            top: auto;
-            left: auto;
-            right: auto;
-            bottom: auto;
-            color: #fff;
-            width: 50px;
+            padding: @defaultPadding;
+            z-index: 101;
+            color: #000;
             height: 50px;
             display: flex;
             align-items: center;
-            justify-content: center;
+            position: sticky;
+            top:0;
             font-size: 1.3rem;
             pointer-events: none;
         }
     }
-    &#left {
-        left: -600px;
-        .sidebar-container {
-            .close-btn {
-                right: -50px;
-            }
-        }
-        &.open {
-            left: 0;
-        }
-    }
-    &#right {
-        right: -600px;
-        .sidebar-container {
-            .close-btn {
-                left: -50px;
-            }
-        }
-        &.open {
-            right: 0;
-        }
-    }
-
 }
