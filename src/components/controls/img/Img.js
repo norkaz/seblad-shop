@@ -1,15 +1,21 @@
 import React from 'react'
 import './Img.less';
 
-export default function Img(props) {
+export default function Img({ headertag: Tag = 'div', ...props}) {
     return (
-        <div className="resp-img" style={{backgroundImage: 'url(' + props.src + ')'}}>
+        <>
             {props.header ? 
-               <span className="splash-header">
-                   {props.header}
-               </span>
-                : <img src={props.src} alt={props.alt}/>
+                <div className="resp-img" style={{backgroundImage: 'url(' + props.src + ')'}}>
+                    <Tag className="splash-header" style={props.shadow ? {textShadow: '0px 0px 18px #000', color: props.color} : {color: props.color}}>
+                        {props.header}
+                    </Tag> 
+                </div>               
+                : 
+                <div className="resp-img">
+                    <img src={props.src} alt={props.alt}/>
+                </div>            
             }
-        </div> 
+        </>
+        
     )
 }
