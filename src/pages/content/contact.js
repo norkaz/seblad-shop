@@ -37,9 +37,29 @@ export default function Contact() {
                   content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
                 }}
               />
+              <button onClick={log}>Log editor content</button>
             </Column>
             <Column>
-            <button onClick={log}>Log editor content</button>
+            <form name="contact" method="POST" data-netlify="true">
+              <p>
+                <label>Your Name: <input type="text" name="name" /></label>   
+              </p>
+              <p>
+                <label>Your Email: <input type="email" name="email" /></label>
+              </p>
+              <p>
+                <label>Your Role: <select name="role[]" multiple>
+                  <option value="leader">Leader</option>
+                  <option value="follower">Follower</option>
+                </select></label>
+              </p>
+              <p>
+                <label>Message: <textarea name="message"></textarea></label>
+              </p>
+              <p>
+                <button type="submit">Send</button>
+              </p>
+            </form>
             </Column>
           </Grid>
         </section>  
