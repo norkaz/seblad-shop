@@ -18,27 +18,10 @@ export default function Contact() {
         <Img headertag="h1" header="Kontakt" src="https://wallpapercave.com/wp/wp7614970.jpg"/>
         <section>
           <Grid gap="40px">
-            <Column>
-              <Editor
-                onInit={(evt, editor) => editorRef.current = editor}
-                initialValue="<p>This is the initial content of the editor.</p>"
-                init={{
-                  height: 500,
-                  menubar: true,
-                  plugins: [
-                    'advlist autolink lists link image charmap print preview anchor',
-                    'searchreplace visualblocks code fullscreen',
-                    'insertdatetime media table paste code help wordcount'
-                  ],
-                  toolbar: 'undo redo | formatselect | ' +
-                  'bold italic backcolor | alignleft aligncenter ' +
-                  'alignright alignjustify | bullist numlist outdent indent | ' +
-                  'removeformat | help',
-                  content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
-                }}
-              />
+            {/* <Column>
+              
               <button onClick={log}>Log editor content</button>
-            </Column>
+            </Column> */}
             <Column>
             <form name="contact" method="POST" data-netlify="true">
               <p>
@@ -54,7 +37,27 @@ export default function Contact() {
                 </select></label>
               </p>
               <p>
-                <label>Message: <textarea name="message"></textarea></label>
+                <label>Message: 
+                  {/* <textarea name="message"></textarea> */}
+                  <Editor name="message"
+                    onInit={(evt, editor) => editorRef.current = editor}
+                    initialValue="<p>This is the initial content of the editor.</p>"
+                    init={{
+                      height: 500,
+                      menubar: true,
+                      plugins: [
+                        'advlist autolink lists link image charmap print preview anchor',
+                        'searchreplace visualblocks code fullscreen',
+                        'insertdatetime media table paste code help wordcount'
+                      ],
+                      toolbar: 'undo redo | formatselect | ' +
+                      'bold italic backcolor | alignleft aligncenter ' +
+                      'alignright alignjustify | bullist numlist outdent indent | ' +
+                      'removeformat | help',
+                      content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+                    }}
+                  />
+                  </label>
               </p>
               <p>
                 <button type="submit">Send</button>

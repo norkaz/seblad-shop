@@ -20,7 +20,7 @@ export default function Design() {
                     <h6>Rubrik h6</h6>
                     <p>Paragraph </p>
                     <p>Paragraph </p>
-                    <p>Paragraph <a href="#">link</a> <b>bold</b></p>
+                    <p>Paragraph <a href="/">link</a> <b>bold</b></p>
                     <button>Button</button>
                 </Text>
                 </section>
