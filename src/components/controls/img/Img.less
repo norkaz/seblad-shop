@@ -1,18 +1,40 @@
+@import '../../../styles/variables.less';
 .resp-img {
     height: 100%;
     background-repeat: no-repeat;
     background-position: center center;
+    background-size: 100%;
     display:flex;
     align-items: center;
     justify-content: center;
-    font-size: 3rem;
     .splash-header {
         line-height: 140%;
         text-align: center;
         padding: 1em 2em;
-        min-height: 4em;
+        min-height: 5em;
         display: flex;
         align-items: center;
         justify-content: center;
+        margin: 0;
+    }
+}
+@media screen and (max-width: 1920px) {
+    .resp-img {
+        background-size: 1920px;
+    }
+}
+@media screen and (max-width: @breakPointFirst) and (min-width: @breakPointSecond) {
+    .resp-img {
+        background-size: @breakPointFirst;
+    }
+}
+@media screen and (max-width: @breakPointSecond) and (min-width: @breakPointThird) {
+    .resp-img {
+        background-size: @breakPointSecond;
+    }
+}
+@media screen and (max-width: @breakPointThird) {
+    .resp-img {
+        background-size: @breakPointThird;
     }
 }

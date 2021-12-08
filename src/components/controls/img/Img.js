@@ -1,7 +1,7 @@
 import React from 'react'
 import './Img.less';
 
-export default function Img({ headertag: Tag = 'div', ...props}) {
+export default function Img({ headertag: Tag = 'h2', ...props}) {
     return (
         <>
             {props.header ? 

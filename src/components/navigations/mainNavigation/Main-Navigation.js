@@ -9,6 +9,7 @@ export default function MainNavigation(props) {
                 <li><Link to="/">Hem</Link></li>
                 <li><Link to="/content/about">Om mig</Link></li>
                 <li><Link to="/content/contact">Kontakt</Link></li>
+                <li><Link to="/design/design">Grafisk profil</Link></li>
                 <li><Link to="/error">404</Link></li>
             </ul>
         </nav>

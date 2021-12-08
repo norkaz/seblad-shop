@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import Structure from '../../components/structure/Structure';
 import Grid from '../../components/controls/grid/Grid';
 import Column from '../../components/controls/grid/column/Column';
+import Img from '../../components/controls/img/Img';
 import { Editor } from '@tinymce/tinymce-react';
 
 
@@ -14,8 +15,9 @@ export default function Contact() {
     };
     return (
       <Structure>
+        <Img headertag="h1" header="Kontakt" src="https://wallpapercave.com/wp/wp7614970.jpg"/>
         <section>
-          <Grid>
+          <Grid gap="40px">
             <Column>
               <Editor
                 onInit={(evt, editor) => editorRef.current = editor}
