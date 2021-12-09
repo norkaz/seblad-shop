@@ -1,8 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { siteData } from '../../data/site/Site-Data';
+import { siteData } from '../../data/site/sitedata';
 import Header from '../header/Header';
-import MainNavigation from '../navigations/mainNavigation/Main-Navigation';
+import Navigation from '../navigations/navigation/Navigation';
 import SideBar from '../sidebar/Side-Bar';
 import Content from '../content/Content';
 import SideBarOverlay from '../sidebar/Side-Bar-Overlay';
@@ -28,14 +28,14 @@ export default function Structure({children}) {
         <div id="wrapper">
             <div id="main">                
                 <Header/>
-                <MainNavigation type="horizontal"/>
+                <Navigation type="horizontal" class="main-navigation" menu="mainMenu"/>
                 <Content>
                     {children}
                 </Content>
                 <Footer/>
             </div>
             <SideBar type="left">
-                <MainNavigation type="vertical"/>
+                <Navigation type="vertical" class="sidebar-navigation" menu="mainMenu"/>
             </SideBar> 
             {/* <SideBar type="right">
                 <MainNavigation type="vertical"/>

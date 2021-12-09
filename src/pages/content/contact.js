@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import Structure from '../../components/structure/Structure';
 import { Helmet } from 'react-helmet';
-import { siteData } from '../../data/site/Site-Data';
+import { siteData } from '../../data/site/sitedata';
 import Grid from '../../components/controls/grid/Grid';
 import Column from '../../components/controls/grid/column/Column';
 import Img from '../../components/controls/img/Img';

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { siteData } from '../data/site/Site-Data'
+import { siteData } from '../data/site/sitedata'
 import Structure from '../components/structure/Structure'
 
 export default function NotFound() {

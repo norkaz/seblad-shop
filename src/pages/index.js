@@ -1,7 +1,7 @@
 import React from "react"
 import Structure from "../components/structure/Structure"
 import { Helmet } from 'react-helmet';
-import { siteData } from "../data/site/Site-Data";
+import { siteData } from "../data/site/sitedata";
 import ShopWindow from "../components/controls/shopWindow/Shop-Window"
 import Img from "../components/controls/img/Img"
 import Text from "../components/controls/text/Text"
