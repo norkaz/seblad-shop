@@ -1,12 +1,20 @@
 import React from "react"
 import Structure from "../components/structure/Structure"
+import { Helmet } from 'react-helmet';
+import { siteData } from "../data/site/sitedata";
 import ShopWindow from "../components/controls/shopWindow/Shop-Window"
 import Img from "../components/controls/img/Img"
 import Text from "../components/controls/text/Text"
 
 export default function Home() {
+  
   return (
-    <Structure>
+    <>
+    <Helmet>
+      <title>{siteData.name} - Hem </title>
+      <meta property="og:type" content="content-page" />
+    </Helmet>
+    <Structure>   
       <Img headertag="h1" header={'VÄLKOMMEN!'} src={'https://i.redd.it/228r4jaqsmb31.jpg'}/>
       <section>
         <Text>
@@ -28,5 +36,6 @@ export default function Home() {
         <ShopWindow isCarousel={true} header="Karusell" />    
       </section>
     </Structure>
+    </>
   )
 }

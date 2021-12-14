@@ -1,5 +1,7 @@
 import React, { useRef } from 'react';
 import Structure from '../../components/structure/Structure';
+import { Helmet } from 'react-helmet';
+import { siteData } from '../../data/site/sitedata';
 import Grid from '../../components/controls/grid/Grid';
 import Column from '../../components/controls/grid/column/Column';
 import Img from '../../components/controls/img/Img';
@@ -7,6 +9,7 @@ import { Editor } from '@tinymce/tinymce-react';
 
 
 export default function Contact() {
+  
     const editorRef = useRef(null);
     const log = () => {
         if (editorRef.current) {
@@ -14,8 +17,13 @@ export default function Contact() {
         }
     };
     return (
+      <>
+      <Helmet>
+        <title>{siteData.name} - Kontakt</title>   
+        <meta property="og:type" content="content-page" />
+      </Helmet>
       <Structure>
-        <Img headertag="h1" header="Kontakt" src="https://wallpapercave.com/wp/wp7614970.jpg"/>
+        <Img color="#FFF" shadow={true} headertag="h1" header="Kontakt" src="https://wallpapercave.com/wp/wp7614970.jpg"/>
         <section>
           <Grid gap="40px">
             {/* <Column>
@@ -67,5 +75,6 @@ export default function Contact() {
           </Grid>
         </section>  
       </Structure>
+      </>
     )
 }

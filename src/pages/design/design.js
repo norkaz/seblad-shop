@@ -1,6 +1,7 @@
 import React from 'react'
 import Structure from '../../components/structure/Structure'
 import Text from '../../components/controls/text/Text'
+import { Link } from 'gatsby';
 
 export default function Design() {
     return (
@@ -20,7 +21,11 @@ export default function Design() {
                     <h6>Rubrik h6</h6>
                     <p>Paragraph </p>
                     <p>Paragraph </p>
+<<<<<<< HEAD
                     <p>Paragraph <a href="/">link</a> <b>bold</b></p>
+=======
+                    <p>Paragraph <Link to="/design/design">link</Link> <b>bold</b></p>
+>>>>>>> 22a4007f2cc7e943bd1483fc7ec1554d402393fa
                     <button>Button</button>
                 </Text>
                 </section>

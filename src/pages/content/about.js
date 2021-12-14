@@ -1,5 +1,7 @@
 import React from 'react'
 import Structure from '../../components/structure/Structure'
+import { Helmet } from 'react-helmet';
+import { siteData } from '../../data/site/sitedata';
 import Grid from '../../components/controls/grid/Grid'
 import Column from '../../components/controls/grid/column/Column'
 import Img from '../../components/controls/img/Img'
@@ -8,7 +10,12 @@ import Text from '../../components/controls/text/Text'
 
 export default function About() {
     return (
-        <Structure>
+        <>
+        <Helmet>
+            <title>{siteData.name} - Om mig</title>   
+            <meta property="og:type" content="content-page" />
+        </Helmet>
+        <Structure>          
             <Img 
                 src="https://wallpapercave.com/wp/wp7615079.jpg"
                 header="Om Seblad Keramik"
@@ -46,5 +53,6 @@ export default function About() {
                 </Grid>
             </section>
         </Structure>
+        </>
     )
 }
