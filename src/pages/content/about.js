@@ -15,14 +15,19 @@ export default function About() {
             <title>{siteData.name} - Om mig</title>   
             <meta property="og:type" content="content-page" />
         </Helmet>
-        <Structure>          
-            <Img 
-                src="https://wallpapercave.com/wp/wp7615079.jpg"
-                header="Om Seblad Keramik"
-                headertag="h1"
-                color="#FFF"
-                shadow={true}
-            />
+        <Structure>
+            <Grid gap="20px">
+                <Column type="full">
+                    <Img 
+                        src="https://facegram.se/CDN/13-2.jpg"
+                        header="Om Seblad Keramik"
+                        headertag="h1"
+                        color="#FFF"
+                        shadow={true}
+                    />
+                </Column>
+            </Grid>       
+            
             <section>
                 <Grid gap="40px">
                     <Column>

@@ -5,11 +5,11 @@ import './Footer.less';
 export default function Footer() {
     return (
         <div id="footer">
-            <div class="footer-container">
-                <div class="menu-box">
+            <div className="footer-container">
+                <div className="menu-box">
                     <Navigation type="vertical" class="footer-navigation" menu="footerMenu" />
                 </div>
-                <div class="menu-box">
+                <div className="menu-box">
                     <Navigation type="vertical" class="footer-navigation" menu="mainMenu" />
                 </div>
             </div>
