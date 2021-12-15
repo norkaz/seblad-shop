@@ -9,6 +9,23 @@ module.exports = {
   plugins: [
     `gatsby-plugin-less`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-csv`,
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data/`,
+        ignore: [`**/\.*`], // ignore files starting with a dot
+      },
+    },
   /*GA*/
   {
     resolve: `gatsby-plugin-google-analytics`,
@@ -27,5 +44,6 @@ module.exports = {
       defer: false,
     },
   },
+ 
 ],
 }
