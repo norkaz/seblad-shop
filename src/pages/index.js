@@ -20,15 +20,10 @@ export default function Home() {
     <Structure>   
       <Grid gap="20px">
         <Column type="full">
-          <Img headertag="h1" header={'VÄLKOMMEN!'} color="#FFF" src={'https://facegram.se/CDN/9-2.jpg'}/>
+          <Video height={'300px'} poster={'https://facegram.se/CDN/9-2.jpg'} autoplay loop muted width="100%" type="video/mp4" src={'https://facegram.se/CDN/centrera-facebook-1920x1080.mp4'}/>
         </Column>
       </Grid>
       <section>
-        <Grid gap="20px">
-          <Column type="full">
-            <Video autoplay={true} loop={true} muted={true} width="100%" type="video/mp4" src={'https://facegram.se/CDN/centrera-facebook-1920x1080.mp4'}/>
-          </Column>
-        </Grid>
         <Grid gap="20px">
           <Column>
             <Img src="https://facegram.se/CDN/12-2.jpg"/>
