@@ -16,6 +16,5 @@ export default function Img({ headertag: Tag = 'h2', ...props}) {
                 </div>            
             }
         </>
-        
     )
 }

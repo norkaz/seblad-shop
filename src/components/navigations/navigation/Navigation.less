@@ -1,0 +1,70 @@
+@import '../../../styles/variables.less';
+.navigation {
+    ul {
+        margin:0;
+        padding:0;
+        li {
+            list-style: none;
+            a { 
+                display: block;               
+                color: @navbarTextColor;
+                &:hover {
+                    color: @linkColor;
+                }
+                &[aria-current=page] {
+                    color: @linkColor; 
+                }
+            }
+            
+        }
+        &.horizontal {
+            display:flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            li {
+                padding: 0 @defaultPadding;
+                
+            }         
+        }
+        &.vertical {
+            li {
+                a {
+                    padding-bottom: @defaultPadding;
+                }
+            }
+        }
+    }
+}
+.main-navigation {
+    position: sticky;
+    z-index: 10;
+    top:0;
+    background: @navbarBackgroundColor;
+    ul {
+
+        &.horizontal {
+            border-top: 1px solid @borderColor;
+            border-bottom: 1px solid @borderColor;
+            li {
+                padding: 0;
+                a { 
+                    padding: @defaultPadding;
+                    &:hover, &[aria-current=page] {
+                        color: @navbarTextColor;
+                        background: @borderColor;
+                    }              
+                }
+            }         
+        }
+        &.vertical {
+            li {
+                a {               
+                    padding: 0 @defaultPadding;
+                    line-height: 80px;
+                }
+            }
+        }
+        
+    }
+
+}
