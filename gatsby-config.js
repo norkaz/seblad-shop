@@ -9,6 +9,14 @@ module.exports = {
   plugins: [
     `gatsby-plugin-less`,
     `gatsby-plugin-react-helmet`,
+
+  /*HTML*/
+  {
+    resolve: 'gatsby-plugin-html-attributes',
+    options: {
+      lang: 'se'
+    }
+  },
   /*GA*/
   {
     resolve: `gatsby-plugin-google-analytics`,

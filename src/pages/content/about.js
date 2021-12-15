@@ -5,7 +5,6 @@ import { siteData } from '../../data/site/sitedata';
 import Grid from '../../components/controls/grid/Grid'
 import Column from '../../components/controls/grid/column/Column'
 import Img from '../../components/controls/img/Img'
-import image from '../../../static/img/content/about.jpg';
 import Text from '../../components/controls/text/Text'
 
 export default function About() {
@@ -32,7 +31,7 @@ export default function About() {
                 <Grid gap="40px">
                     <Column>
                         <Img 
-                        src={image}
+                        src={'https://facegram.se/CDN/about.jpg'}
                         alt="Bild" 
                         />
                     </Column>

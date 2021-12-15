@@ -12,7 +12,7 @@ export default function Img({ headertag: Tag = 'h2', ...props}) {
                 </div>               
                 : 
                 <div className="resp-img">
-                    <img src={props.src} alt={props.alt}/>
+                    <img src={props.src} height={props.height} width={props.width} alt={props.alt ? props.alt : 'Bild'}/>
                 </div>            
             }
         </>
