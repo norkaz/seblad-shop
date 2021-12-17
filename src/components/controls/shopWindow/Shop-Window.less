@@ -3,6 +3,7 @@
     margin: 0 -@defaultPadding/2;
 
     .react-multi-carousel-track {
+        padding-bottom: 1.5rem;
         .item {
             margin: @defaultPadding 0;
             padding: 0 @defaultPadding/2;
@@ -46,6 +47,10 @@
                     }
                     .intro {
                         font-size: 0.85rem;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        height: 24px;
                     }
                     .price-container {
                         display: flex;
@@ -63,6 +68,23 @@
                             color: #F00;
                         }
                     }
+                }
+                
+            }
+        }
+    }
+    .react-multi-carousel-dot-list  {
+        .react-multi-carousel-dot {
+            button {
+                border-width: 1px;
+                background: transparent;
+                width: 1rem;
+                height: 1rem;
+                border-color: @linkColor;
+            }
+            &.react-multi-carousel-dot--active {
+                button {
+                    background: @linkColor;
                 }
                 
             }
