@@ -7,9 +7,14 @@ export const menus =
             url: '/'
         },
         {
+            name: 'Produkter',
+            url: '/products'
+        },
+        {
             name: 'Om mig',
             url: '/content/about'
-        }
+        },
+        
     ],
     footerMenu:
     [       
