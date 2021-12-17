@@ -19,7 +19,7 @@ export default function Home() {
     <Structure>   
       <Grid gap="20px">
         <Column type="full">
-          <Video height={'300px'} poster={'https://facegram.se/CDN/9-2.jpg'} autoplay loop muted width="100%" type="video/mp4" src={'https://facegram.se/CDN/centrera-facebook-1920x1080.mp4'}/>
+          <Video height={'300px'} poster={'https://facegram.se/CDN/9-2.jpg'} autoplay loop muted width="100%" type="video/mp4" src={'https://facegram.se/CDN/centrera-facebook-1920x1080.m4v'}/>
         </Column>
       </Grid>
       <section>
@@ -39,7 +39,7 @@ export default function Home() {
             <Img src="https://facegram.se/CDN/13-2.jpg"/>
           </Column>
           <Column>
-            <Video autoplay={true} loop={true} muted={true} width="100%" type="video/mp4" src={'https://facegram.se/CDN/dreja-instagram-640x360.mp4'}/>
+            <Video autoplay={true} loop={true} muted={true} width="100%" type="video/mp4" src={'https://facegram.se/CDN/dreja-instagram-640x360.m4v'}/>
           </Column>
         </Grid>
         <Grid gap="20px">
