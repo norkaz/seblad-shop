@@ -13,6 +13,7 @@ export default function Img({ headertag: Tag = 'h2', ...props}) {
                 </div>               
                 : props.popup ?
                 <ModalImage className="resp-img"
+                    smallSrcSet={props.src}
                     small={props.src}
                     large={props.src}
                     alt={props.alt}
