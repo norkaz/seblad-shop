@@ -16,7 +16,7 @@ export default function Home() {
       <title>{siteData.name} - Hem </title>
       <meta property="og:type" content="content-page" />
     </Helmet>
-    <Structure>   
+    <Structure>        
       <Grid gap="20px">
         <Column type="full">
           <Video height={'300px'} poster={'https://facegram.se/CDN/9-2.jpg'} autoplay loop muted width="100%" type="video/mp4" src={'https://facegram.se/CDN/centrera-facebook-1920x1080.m4v'}/>
@@ -25,13 +25,13 @@ export default function Home() {
       <section>
         <Grid gap="20px">
           <Column>
-            <Img src="https://facegram.se/CDN/12-2.jpg"/>
+            <Img popup={true} src="https://facegram.se/CDN/12-2.jpg"/>
           </Column>
           <Column>
-            <Img src="https://facegram.se/CDN/1-2.jpg"/>
+            <Img popup={true} src="https://facegram.se/CDN/1-2.jpg"/>
           </Column>
           <Column>
-            <Img src="https://facegram.se/CDN/8-2.jpg"/>
+            <Img popup={true} src="https://facegram.se/CDN/8-2.jpg"/>
           </Column>
         </Grid> 
         <Grid gap="20px">

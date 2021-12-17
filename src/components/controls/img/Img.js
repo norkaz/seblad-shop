@@ -1,4 +1,5 @@
 import React from 'react'
+import ModalImage from "react-modal-image";
 import './Img.less';
 
 export default function Img({ headertag: Tag = 'h2', ...props}) {
@@ -10,10 +11,16 @@ export default function Img({ headertag: Tag = 'h2', ...props}) {
                         {props.header}
                     </Tag> 
                 </div>               
+                : props.popup ?
+                <ModalImage className="resp-img"
+                    small={props.src}
+                    large={props.src}
+                    alt={props.alt}
+                />                    
                 : 
                 <div className="resp-img">
-                    <img src={props.src} height={props.height} width={props.width} alt={props.alt ? props.alt : 'Bild'}/>
-                </div>            
+                    <img src={props.src} height={props.height} width={props.width} alt={props.alt ? props.alt : 'Bild'}/>                   
+                </div>                         
             }
         </>
     )
