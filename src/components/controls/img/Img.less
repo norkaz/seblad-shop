@@ -11,13 +11,14 @@
 
     img {
         box-shadow: 0 0px 15px 6px #00000024;
-        height: 100%;
-        display: block;
+        max-height: 100%;
         transition: all ease 0.4s;
     }
 
     img.resp-img-popup {       
         object-fit: scale-down;
+        max-height: 100%;
+        display: block;
         &:hover {
             box-shadow: 0 0px 15px 6px #00000045;
         }
