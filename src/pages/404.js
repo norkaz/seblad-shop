@@ -2,6 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { siteData } from '../data/site/sitedata'
 import Structure from '../components/structure/Structure'
+import Text from '../components/controls/text/Text'
 
 export default function NotFound() {
     
@@ -13,8 +14,10 @@ export default function NotFound() {
         </Helmet>
         <Structure>
             <section>
-                <h1>Hoppsan!</h1>
-                <p>Sidan verkar ha försvunnit någonstans. Testa Googla</p>
+                <Text>
+                    <h1>Hoppsan!</h1>
+                    <p>Sidan verkar ha försvunnit någonstans. Testa Googla</p>
+                </Text>              
             </section>
         </Structure>
     </>
