@@ -8,18 +8,21 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0px 15px 6px #00000024;
-    transition: all ease 0.4s;
 
-    img.resp-img-popup {
+    img {
+        box-shadow: 0 0px 15px 6px #00000024;
+        height: 100%;
         display: block;
+        transition: all ease 0.4s;
+    }
+
+    img.resp-img-popup {       
         object-fit: scale-down;
+        &:hover {
+            box-shadow: 0 0px 15px 6px #00000045;
+        }
     }
-
-    &:hover {
-        box-shadow: 0 0px 15px 6px #00000045;
-    }
-
+    
     .splash-header {
         line-height: 140%;
         text-align: center;
