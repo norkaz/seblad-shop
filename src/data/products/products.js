@@ -7,7 +7,7 @@ export const products = [
         description: "Brun kanna med delad glasyr",
         price: 499,
         currency: "SEK",
-        discountPercent: 0,
+        discountPercent: 34,
         discountBadge: 'REA',
     },
     {

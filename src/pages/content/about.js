@@ -28,7 +28,7 @@ export default function About() {
             </Grid>       
             
             <section>
-                <Grid gap="40px">
+                <Grid gap="40px" type="mobile-full">
                     <Column>
                         <Img 
                         src={'https://facegram.se/CDN/about.jpg'}

@@ -25,16 +25,16 @@ export default function Home() {
       <section>
         <Grid gap="20px">
           <Column>
-            <Img popup={true} src="https://facegram.se/CDN/12-2.jpg"/>
+            <Img popup={true} src="https://facegram.se/CDN/12-2.jpg" srcLarge="https://facegram.se/CDN/12-2_L.jpg"/>
           </Column>
           <Column>
-            <Img popup={true} src="https://facegram.se/CDN/1-2.jpg"/>
+            <Img popup={true} src="https://facegram.se/CDN/1-2.jpg" srcLarge="https://facegram.se/CDN/1-2_L.jpg"/>
           </Column>
           <Column>
-            <Img popup={true} src="https://facegram.se/CDN/8-2.jpg"/>
+            <Img popup={true} src="https://facegram.se/CDN/8-2.jpg" srcLarge="https://facegram.se/CDN/8-2_L.jpg"/>
           </Column>
         </Grid> 
-        <Grid gap="20px">
+        <Grid gap="20px" type="mobile-full">  
           <Column>
             <Img src="https://facegram.se/CDN/13-2.jpg"/>
           </Column>

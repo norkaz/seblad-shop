@@ -32,14 +32,15 @@ export default function ProductList(props) {
             {products.map((data, key) => {
                 
                 const savingPrice = Math.round(data.price * (data.discountPercent/100))
-            
+                const productUrl = '/article/' + data.id + '-' + data.artNr + '/' + data.intro.replace(/\s/g, '_')
                 return (
                     
+                    
                 <div key={key} className="item">
-                    <a href={'/article/' + data.name}>
+                    <a href={productUrl}>
                         <div className="border-wrapper">
                             <div className="image">
-                                {savingPrice ? <span className="badge">{data.discountPercent} %</span>: ''}
+                                {savingPrice ? <span className="badge">{data.discountPercent + '%'}</span>: ''}
                                 <Img src={'https://facegram.se/CDNproducts/articlenumbers/' + data.artNr + '.jpg'} alt={data.name} width="400px" height="400px" />
                             </div>
                             <div className="item-info">
