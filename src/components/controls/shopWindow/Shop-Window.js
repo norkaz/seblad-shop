@@ -32,7 +32,7 @@ export default function ProductList(props) {
             {products.map((data, key) => {
                 
                 const savingPrice = Math.round(data.price * (data.discountPercent/100))
-                const productUrl = '/article/' + data.id + '-' + data.artNr + '/' + data.intro.replace(/\s/g, '_')
+                const productUrl = '/products/product/' + data.id + '-' + data.artNr + '-' + data.intro.replace(/\s/g, '_')
                 return (
                     
                     

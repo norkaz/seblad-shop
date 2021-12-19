@@ -1,6 +1,6 @@
 export const products = [
     {
-        id: 1,
+        id: "1",
         artNr: "000001",
         name: "Kanna",
         intro: "Brun kanna med glasyr",
@@ -11,7 +11,7 @@ export const products = [
         discountBadge: 'REA',
     },
     {
-        id: 2,
+        id: "2",
         artNr: "000002",
         name: "Skål",
         intro: "Brun skål med delad glasyr",
@@ -22,7 +22,7 @@ export const products = [
         discountBadge: null,
     },
     {
-        id: 3,
+        id: "3",
         artNr: "000003",
         name: "Kanna",
         intro: "Ljus kanna",
@@ -33,7 +33,7 @@ export const products = [
         discountBadge: null,
     },
     {
-        id: 4,
+        id: "4",
         artNr: "000004",
         name: "Skål",
         intro: "Djup skål i ljus glasyr",
@@ -44,7 +44,7 @@ export const products = [
         discountBadge: null,
     },
     {
-        id: 5,
+        id: "5",
         artNr: "000005",
         name: "Kopp",
         intro: "Liten kopp utan öra",
@@ -55,7 +55,7 @@ export const products = [
         discountBadge: null,
     },
     {
-        id: 6,
+        id: "6",
         artNr: "000006",
         name: "Kanna",
         intro: "Liten kanna",
