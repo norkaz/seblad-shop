@@ -69,7 +69,7 @@ export default function Product(props) {
               </div>
             </Column>
             <Column>
-              <Te xt>
+              <Text>
                 <h2>{product.intro}</h2>
                 <div className="price-container">
                   {savingPrice ? (
