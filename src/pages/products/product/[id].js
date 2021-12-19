@@ -69,26 +69,24 @@ export default function Product(props) {
               </div>
             </Column>
             <Column>
-              <Text>
-                <h2>{product.intro}</h2>
-                <div className="price-container">
-                  {savingPrice ? (
-                    <>
-                      <div className="price discount">
-                        {product.price - savingPrice} {product.currency}
-                      </div>
-                      <div className="regular-price">
-                        {product.price} {product.currency}
-                      </div>
-                    </>
-                  ) : (
-                    <div className="price">
+              <h2>{product.intro}</h2>
+              <div className="price-container">
+                {savingPrice ? (
+                  <>
+                    <div className="price discount">
+                      {product.price - savingPrice} {product.currency}
+                    </div>
+                    <div className="regular-price">
                       {product.price} {product.currency}
                     </div>
-                  )}
-                </div>
-                <p>{product.description}</p>
-              </Text>
+                  </>
+                ) : (
+                  <div className="price">
+                    {product.price} {product.currency}
+                  </div>
+                )}
+              </div>
+              <p>{product.description}</p>
             </Column>
           </Grid>
         </section>
