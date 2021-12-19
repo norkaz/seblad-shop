@@ -11,6 +11,13 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-csv`,
     `gatsby-transformer-json`,
+    /*HTML*/
+    {
+    resolve: 'gatsby-plugin-html-attributes',
+    options: {
+      lang: 'se'
+    }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
