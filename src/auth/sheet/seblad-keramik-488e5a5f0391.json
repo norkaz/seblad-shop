@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "seblad-keramik",
+  "private_key_id": "488e5a5f0391cfc54ac30431e86a12fecf8dd63b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCwGPLsCVDJc42Q\nXlX4SfgH9lvEZX3KQqKs+rBfMuMJvo2eXzKeZ33y5eJJNs/xKFbxYT4fZ0JiGWEK\nVQV99Q+mBYVderXs5yk6cEpVv7VXgPFhzDlxYw4U+M9KQgBDjEjoQttXe994FSaQ\nnukXlxbE0n39aDSHlASl0sz1/I7TnYv/tAlfv7Wq74relLA3A2N5XVg5wXPSMGn+\ndTYgRsEorS4garpiW/HGvyTvLZ+niLwWN4bVKs2JuHkSqkqjGZooFQ0zqzfpdRbw\n39InlZ4LiF/3UltEUfdTxZ/HhIfETckrB4KZqvi3Kd3BXeg5S8Yzom8VTIJZq9Dn\nM2NLoD/bAgMBAAECggEAC72mGKGoXr4TDrCTd8nqvREqXiZMJDucH/9Y2ggJBiHL\nzGbZd6E7zwGPvEToyVHgthg/LZXTYboCc89mXdcEc5PDqA9h6MkiwRAyjJQLEan5\nrgURQWOS0UgjffZ3kQld5QpsGGGcbSOv3g2SSe3baUUFfGtBsVZnluy+mJn9pdMr\nVdB0On6EMZEc05aOHFKPanixMFemo69PMuCqYWFQTfgWCHBlnGClrkOFFIV9YGnA\nf2Ode6Qtk/O+vhY9+nlshuE3AWVyRoAyTdLqIdi106dhQlm93FyGlJRXZ9LkGBBv\nhsL5aEriS5cUL06WH3QOl6+raTgZO77piSL9dWGUPQKBgQDmWBPKc6U8FgD0oNqi\nsqAJK+syb5VpWz5/QS23w2UtlWdHRixHTpthKnEtsOF273tauvK1B/retchAsKjp\n2XsHy8yqfkAzi0XXWfQABoTTG/9qMMPaZzF7JVxsgSbBgKneR0Bzy5kK5IONaxH/\nOxYcz/wui/ScDI0yav18K+LQtwKBgQDDthwKIzhnASe+468dUFKcpslCLG7zCgDz\nmr/n74PxLqeY11kTJxI0KfzcJN3BjSEKslpqq/VchrNWAkYKEJM8IWrBDtr380ri\nUPvRYasD66B1e9tjPdU7dvoH0n3Er1o85rx5Cd8KTFCc45DBTB78RuWM+JJuhv73\nETo7lgbd/QKBgQCITsq3XSQEoIjEOoPnD4lApCq0V++0vvgG2g0x14ECLo1FUjNV\npyCvqSv8e9WQSjtW/5YspqJANJZiIahzae0yOdnNcpSPa/VScLrBYRosyz6kGmNr\n1PElDIDa/Lpwe7EKBmQPogXYuk1W3Gtz/AUj27hB2zRPO+Y6VbHXTykTlQKBgQC5\njhfXpLz9LCM64TROXrF0xM1caDRpSbrNPJNmm7hFGy7bwpE5j3m663RKZMm7kMsb\nES6YpKDlMPEnQtCVClIOWMCWejcxjwIYwR9/zVIPTX+848mFtkJNNuioMfH8YST1\nSO6485r8cI6dsUS1gC6AkddiaOqs0GE8bqD/jabFIQKBgEa1YyV736+YBAdInaAi\nsfXYlHMGBg10iuJ3hAs+xT/B8H3J5lMuZJY2zqCUwbPXclndGSUzth81pLMfNw9A\n9D1TQwRCmLugE/UYAeuGDwJNyMDTZeRoBIhOO++JtQyDdr7EF2CFbQVhFdC6xZ69\nQBvG7X4nmVG+BfvWMSNKuAUw\n-----END PRIVATE KEY-----\n",
+  "client_email": "seblad-keramik@seblad-keramik.iam.gserviceaccount.com",
+  "client_id": "104230127584718308634",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/seblad-keramik%40seblad-keramik.iam.gserviceaccount.com"
+}
