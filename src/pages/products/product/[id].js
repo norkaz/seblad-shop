@@ -41,7 +41,7 @@ export default function Product(props) {
             />
           </Column>
         </Grid>
-        <div className="section">
+        <div className="section product-info">
           <Grid gap="20px" type="mobile-full">
             <Column>
               <div className="product-image">
