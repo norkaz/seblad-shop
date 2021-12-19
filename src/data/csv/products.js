@@ -4,16 +4,20 @@ import { useStaticQuery, graphql } from "gatsby"
 const ComponentName = () => {
   const data = useStaticQuery(graphql`
     {
-      productsCsv {
-        id
-        artNr
-        currency
-        description
-        discountBadge
-        discountPercent
-        intro
-        name
-        price
+      allProductsCsv {
+        edges {
+          node {
+            id
+            name
+            price
+            intro
+            discountPercent
+            discountBadge
+            description
+            currency
+            artNr
+          }
+        }
       }
     }
   `)
@@ -21,4 +25,3 @@ const ComponentName = () => {
 }
 
 export default ComponentName
-
