@@ -11,7 +11,7 @@ import { products } from "../../../data/products/products"
 import ShopWindow from "../../../components/controls/shopWindow/Shop-Window"
 
 export default function Product(props) {
-  const splat = props.params.id
+  const splat = props.params.id || "1"
   const articleId = splat.match(/(\d{1,})-*/)[1]
 
   const getProductById = _id => products.find(({ id }) => id === _id)
