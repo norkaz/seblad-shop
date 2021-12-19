@@ -41,7 +41,7 @@ export default function Product(props) {
             />
           </Column>
         </Grid>
-        <div>
+        <section>
           <Grid gap="20px" type="mobile-full">
             <Column>
               <div className="product-image">
@@ -89,7 +89,7 @@ export default function Product(props) {
               <p>{product.description}</p>
             </Column>
           </Grid>
-        </div>
+        </section>
         <section>
           <ShopWindow header="Skyltfönster" />
         </section>
