@@ -10,7 +10,6 @@ module.exports = {
     `gatsby-plugin-less`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-csv`,
-    `gatsby-transformer-json`,
     /*HTML*/
     {
       resolve: "gatsby-plugin-html-attributes",

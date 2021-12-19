@@ -25,7 +25,7 @@ export default function Product(props) {
     <>
       <Helmet>
         <title>
-          {siteData.name} - {product.name}{" "}
+          {siteData.name} - {product.name}
         </title>
         <meta property="og:type" content="content-page" />
       </Helmet>
