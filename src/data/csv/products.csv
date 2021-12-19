@@ -1,0 +1,15 @@
+id,artNr,name,intro,description,price,currency,discountPercent,discountBadge
+1,1,Kopp brun,Brun kopp,Brun kopp gjord i mörk glasyr,499,SEK,20,REA
+2,2,Kopp brun,Brun kopp,Brun kopp gjord i mörk glasyr,499,SEK,20,REA
+3,3,Kopp brun,Brun kopp,Brun kopp gjord i mörk glasyr,499,SEK,20,REA
+4,4,Kopp brun,Brun kopp,Brun kopp gjord i mörk glasyr,499,SEK,0,REA
+5,5,Kopp brun,Brun kopp,Brun kopp gjord i mörk glasyr,499,SEK,0,REA
+6,6,Kopp brun,Brun kopp,Brun kopp gjord i mörk glasyr,499,SEK,20,REA
+7,7,Kopp brun,Brun kopp,Brun kopp gjord i mörk glasyr,499,SEK,0,REA
+8,8,Kopp brun,Brun kopp,Brun kopp gjord i mörk glasyr,499,SEK,0,REA
+9,9,Kopp brun,Brun kopp,Brun kopp gjord i mörk glasyr,499,SEK,20,REA
+10,10,Kopp brun,Brun kopp,Brun kopp gjord i mörk glasyr,499,SEK,20,REA
+11,11,Kopp brun,Brun kopp,Brun kopp gjord i mörk glasyr,499,SEK,0,REA
+12,12,Kopp brun,Brun kopp,Brun kopp gjord i mörk glasyr,499,SEK,20,REA
+13,13,Kopp brun,Brun kopp,Brun kopp gjord i mörk glasyr,499,SEK,0,REA
+14,14,Kopp brun,Brun kopp,Brun kopp gjord i mörk glasyr,499,SEK,20,REA
