@@ -41,7 +41,7 @@ export default function Product(props) {
             />
           </Column>
         </Grid>
-        <section className="product-info">
+        <section>
           <Grid gap="20px" type="mobile-full">
             <Column>
               <div className="product-image">
@@ -69,7 +69,7 @@ export default function Product(props) {
               </div>
             </Column>
             <Column>
-              <Text>
+              <Te xt>
                 <h2>{product.intro}</h2>
                 <div className="price-container">
                   {savingPrice ? (
