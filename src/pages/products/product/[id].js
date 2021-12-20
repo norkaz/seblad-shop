@@ -1,11 +1,8 @@
 import React from "react"
+import "./product.less"
 import { siteData } from "../../../data/site/sitedata"
 import { Helmet } from "react-helmet"
-import "./product.less"
 import Structure from "../../../components/structure/Structure"
-import Text from "../../../components/controls/text/Text"
-import Grid from "../../../components/controls/grid/Grid"
-import Column from "../../../components/controls/grid/column/Column"
 import Img from "../../../components/controls/img/Img"
 import { products } from "../../../data/products/products"
 import ShopWindow from "../../../components/controls/shopWindow/Shop-Window"
@@ -30,20 +27,16 @@ export default function Product(props) {
         <meta property="og:type" content="content-page" />
       </Helmet>
       <Structure>
-        <Grid gap="20px">
-          <Column type="full">
-            <Img
-              src="https://facegram.se/CDN/13-2.jpg"
-              header={product.name}
-              headertag="h1"
-              color="#FFF"
-              shadow={false}
-            />
-          </Column>
-        </Grid>
+        <Img
+          src="https://facegram.se/CDN/13-2.jpg"
+          header={product.name}
+          headertag="h1"
+          color="#FFF"
+          shadow={false}
+        />
         <div className="section product-info">
-          <Grid gap="20px" type="mobile-full">
-            <Column>
+          <div className="grid">
+            <div className="column">
               <div className="product-image">
                 {savingPrice ? (
                   <span className="badge">{product.discountPercent + "%"}</span>
@@ -67,9 +60,9 @@ export default function Product(props) {
                   height="400px"
                 />
               </div>
-            </Column>
-            <Column>
-              <Text>
+            </div>
+            <div className="column">
+              <div className="text-box">
                 <h2>{product.intro}</h2>
                 <div className="price-container">
                   {savingPrice ? (
@@ -88,9 +81,9 @@ export default function Product(props) {
                   )}
                 </div>
                 <p>{product.description}</p>
-              </Text>
-            </Column>
-          </Grid>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="section">
           <ShopWindow />

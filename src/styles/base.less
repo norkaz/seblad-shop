@@ -1,65 +1,99 @@
-@import './variables.less';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500&display=swap');
+@import "./variables.less";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500&display=swap");
 
-*, ::after, ::before {
-    box-sizing: border-box;
+*,
+::after,
+::before {
+  box-sizing: border-box;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    text-transform: uppercase;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
 }
 
-html, body {
-    font-family: @defaultFont;
-    font-weight: @defaultFontWeight;
-    background: @backgroundColor;
-    margin:0;
-    font-size: 1rem;
-    overflow-x: hidden;
+html,
+body {
+  font-family: @defaultFont;
+  font-weight: @defaultFontWeight;
+  background: @backgroundColor;
+  margin: 0;
+  font-size: 1rem;
+  overflow-x: hidden;
+  height: 100%;
+  #___gatsby {
     height: 100%;
-    #___gatsby {
-        height: 100%;
-        > div {
-            height: 100%;
-        }
+    > div {
+      height: 100%;
     }
-}        
+  }
+}
 p a {
-    color: var(--linkColor);
-    &:hover {
-        text-decoration: underline;
-    }
-    
+  color: var(--linkColor);
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 a {
-    color: var(--textColor);
-    text-decoration: none;
+  color: var(--textColor);
+  text-decoration: none;
 }
 
 img {
-    max-width: 100%;
-    object-fit: cover;
+  max-width: 100%;
+  object-fit: cover;
 }
 
-p{
-    line-height: 140%;
+p {
+  line-height: 140%;
 }
 
+.text-box {
+  @media screen and (max-width: @breakPointThird) {
+    padding: 0 @defaultPadding;
+  }
+}
 
 :root {
-    // general
-    --fontSize: @fontSize;
-    font-size: var(--fontSize);
-    // color
-    --textColor: @textColor;
-    --linkColor: @linkColor;
-    --primaryColor: #f09;
-    --secondaryColor: #039;
-    // sizes
+  // general
+  --fontSize: @fontSize;
+  font-size: var(--fontSize);
+  // color
+  --textColor: @textColor;
+  --linkColor: @linkColor;
+  --primaryColor: #f09;
+  --secondaryColor: #039;
+  // sizes
 
-    // others
-    // header
-    --headerBackgroundColor: @headerBackgroundColor;
-    --headerTextColor: @headerTextColor;
+  // others
+  // header
+  --headerBackgroundColor: @headerBackgroundColor;
+  --headerTextColor: @headerTextColor;
+}
+
+div.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -@defaultPadding / 2;
+  div.column {
+    padding: @defaultPadding / 2;
+
+    @media screen and (min-width: @breakPointFirst) {
+      flex: 1 1;
+    }
+
+    @media screen and (max-width: @breakPointFirst) and (min-width: @breakPointSecond) {
+      flex: 1 1;
+    }
+    @media screen and (max-width: @breakPointSecond) and (min-width: @breakPointThird) {
+      flex: 1 1;
+    }
+    @media screen and (max-width: @breakPointThird) {
+    }
+  }
 }

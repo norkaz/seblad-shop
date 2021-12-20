@@ -2,10 +2,7 @@ import React from "react"
 import Structure from "../../components/structure/Structure"
 import { Helmet } from "react-helmet"
 import { siteData } from "../../data/site/sitedata"
-import Grid from "../../components/controls/grid/Grid"
-import Column from "../../components/controls/grid/column/Column"
 import Img from "../../components/controls/img/Img"
-import Text from "../../components/controls/text/Text"
 
 export default function About() {
   return (
@@ -15,25 +12,20 @@ export default function About() {
         <meta property="og:type" content="content-page" />
       </Helmet>
       <Structure>
-        <Grid gap="20px">
-          <Column type="full">
-            <Img
-              src="https://facegram.se/CDN/13-2.jpg"
-              header="Om Seblad Keramik"
-              headertag="h1"
-              color="#FFF"
-              shadow={false}
-            />
-          </Column>
-        </Grid>
-
+        <Img
+          src="https://facegram.se/CDN/13-2.jpg"
+          header="Om Seblad Keramik"
+          headertag="h1"
+          color="#FFF"
+          shadow={false}
+        />
         <div className="section">
-          <Grid gap="40px" type="mobile-full">
-            <Column>
+          <div className="grid">
+            <div className="column">
               <Img src={"https://facegram.se/CDN/about.jpg"} alt="Bild" />
-            </Column>
-            <Column>
-              <Text>
+            </div>
+            <div className="column">
+              <div className="text-box">
                 <h1>Seblad keramik</h1>
                 <p>
                   Nils Seblad började dreja för över 35 år sen och har sedan
@@ -65,9 +57,9 @@ export default function About() {
                   höra av dig!
                 </p>
                 <p>nils@sebladkeramik.se</p>
-              </Text>
-            </Column>
-          </Grid>
+              </div>
+            </div>
+          </div>
         </div>
       </Structure>
     </>
