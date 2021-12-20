@@ -26,9 +26,9 @@ export default function Home() {
             />
           </Column>
         </Grid>
-        <section>
-          <ShopWindow header="Skyltfönster" />
-        </section>
+        <div className="section">
+          <ShopWindow />
+        </div>
       </Structure>
     </>
   )

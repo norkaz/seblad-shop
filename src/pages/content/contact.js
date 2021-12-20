@@ -1,30 +1,33 @@
-import React from 'react';
-import Structure from '../../components/structure/Structure';
-import { Helmet } from 'react-helmet';
-import { siteData } from '../../data/site/sitedata';
-import Grid from '../../components/controls/grid/Grid';
-import Column from '../../components/controls/grid/column/Column';
-import Img from '../../components/controls/img/Img';
+import React from "react"
+import Structure from "../../components/structure/Structure"
+import { Helmet } from "react-helmet"
+import { siteData } from "../../data/site/sitedata"
+import Grid from "../../components/controls/grid/Grid"
+import Column from "../../components/controls/grid/column/Column"
+import Img from "../../components/controls/img/Img"
 
 export default function Contact() {
-  
-    return (
-      <>
+  return (
+    <>
       <Helmet>
-        <title>{siteData.name} - Kontakt</title>   
+        <title>{siteData.name} - Kontakt</title>
         <meta property="og:type" content="content-page" />
       </Helmet>
       <Structure>
-        <Img color="#FFF" shadow={true} headertag="h1" header="Kontakt" src="https://wallpapercave.com/wp/wp7614970.jpg"/>
-        <section>
+        <Img
+          color="#FFF"
+          shadow={true}
+          headertag="h1"
+          header="Kontakt"
+          src="https://wallpapercave.com/wp/wp7614970.jpg"
+        />
+        <div className="section">
           <Grid gap="40px">
-            <Column>
-            </Column>
-            <Column>
-            </Column>
+            <Column></Column>
+            <Column></Column>
           </Grid>
-        </section>  
+        </div>
       </Structure>
-      </>
-    )
+    </>
+  )
 }

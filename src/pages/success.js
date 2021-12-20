@@ -24,9 +24,9 @@ import Structure from "../components/structure/Structure"
 export default function Success() {
   return (
     <Structure>
-      <section>
+      <div className="section">
         <ComponentName />
-      </section>
+      </div>
     </Structure>
   )
 }

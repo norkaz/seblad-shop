@@ -29,7 +29,7 @@ export default function Home() {
             />
           </Column>
         </Grid>
-        <section>
+        <div className="section">
           <Grid gap="20px">
             <Column>
               <Img
@@ -81,7 +81,7 @@ export default function Home() {
               <Img src="https://facegram.se/CDN/20-2.jpg" />
             </Column>
           </Grid>
-        </section>
+        </div>
       </Structure>
     </>
   )

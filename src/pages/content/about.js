@@ -27,7 +27,7 @@ export default function About() {
           </Column>
         </Grid>
 
-        <section>
+        <div className="section">
           <Grid gap="40px" type="mobile-full">
             <Column>
               <Img src={"https://facegram.se/CDN/about.jpg"} alt="Bild" />
@@ -68,7 +68,7 @@ export default function About() {
               </Text>
             </Column>
           </Grid>
-        </section>
+        </div>
       </Structure>
     </>
   )
