@@ -92,9 +92,9 @@ export default function Product(props) {
             </Column>
           </Grid>
         </div>
-        <section>
-          <ShopWindow header="Skyltfönster" />
-        </section>
+        <div className="section">
+          <ShopWindow />
+        </div>
       </Structure>
     </>
   )
