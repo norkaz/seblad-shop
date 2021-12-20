@@ -49,7 +49,13 @@ export default function Home() {
           </div>
           <div className="grid">
             <div className="column">
-              <Img src="https://facegram.se/CDN/13-2.jpg" />
+              <Img
+                link="/products"
+                color="#FFF"
+                header="produkter"
+                headerTag="h3"
+                src="https://facegram.se/CDN/13-2.jpg"
+              />
             </div>
             <div className="column">
               <Video

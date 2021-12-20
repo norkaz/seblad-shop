@@ -2,12 +2,31 @@ import React from "react"
 import ModalImage from "react-modal-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSearchPlus } from "@fortawesome/free-solid-svg-icons"
+import { Link } from "gatsby"
 import "./Img.less"
 
 export default function Img({ headertag: Tag = "h2", ...props }) {
   return (
     <>
-      {props.header ? (
+      {props.header && props.link ? (
+        <Link to={props.link}>
+          <div
+            className="resp-img"
+            style={{ backgroundImage: "url(" + props.src + ")" }}
+          >
+            <Tag
+              className="splash-header"
+              style={
+                props.shadow
+                  ? { textShadow: "0px 0px 18px #000", color: props.color }
+                  : { color: props.color }
+              }
+            >
+              {props.header}
+            </Tag>
+          </div>
+        </Link>
+      ) : props.header ? (
         <div
           className="resp-img"
           style={{ backgroundImage: "url(" + props.src + ")" }}

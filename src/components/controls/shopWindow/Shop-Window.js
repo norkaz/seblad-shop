@@ -1,6 +1,7 @@
 import React from "react"
 import "./Shop-Window.less"
 import { products } from "../../../data/products/products"
+import { Link } from "gatsby"
 import Img from "../img/Img"
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
@@ -42,7 +43,7 @@ export default function ProductList(props) {
             product.intro.replace(/\s/g, "_")
           return (
             <div key={key} className="item">
-              <a href={productUrl}>
+              <Link to={productUrl}>
                 <div className="border-wrapper">
                   <div className="image">
                     {savingPrice ? (
@@ -82,7 +83,7 @@ export default function ProductList(props) {
                     </div>
                   </div>
                 </div>
-              </a>
+              </Link>
             </div>
           )
         })}
