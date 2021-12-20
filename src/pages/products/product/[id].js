@@ -3,6 +3,7 @@ import { siteData } from "../../../data/site/sitedata"
 import { Helmet } from "react-helmet"
 import "./product.less"
 import Structure from "../../../components/structure/Structure"
+import Text from "../../../components/controls/text/Text"
 import Grid from "../../../components/controls/grid/Grid"
 import Column from "../../../components/controls/grid/column/Column"
 import Img from "../../../components/controls/img/Img"
@@ -68,24 +69,26 @@ export default function Product(props) {
               </div>
             </Column>
             <Column>
-              <h2>{product.intro}</h2>
-              <div className="price-container">
-                {savingPrice ? (
-                  <>
-                    <div className="price discount">
-                      {product.price - savingPrice} {product.currency}
-                    </div>
-                    <div className="regular-price">
+              <Text>
+                <h2>{product.intro}</h2>
+                <div className="price-container">
+                  {savingPrice ? (
+                    <>
+                      <div className="price discount">
+                        {product.price - savingPrice} {product.currency}
+                      </div>
+                      <div className="regular-price">
+                        {product.price} {product.currency}
+                      </div>
+                    </>
+                  ) : (
+                    <div className="price">
                       {product.price} {product.currency}
                     </div>
-                  </>
-                ) : (
-                  <div className="price">
-                    {product.price} {product.currency}
-                  </div>
-                )}
-              </div>
-              <p>{product.description}</p>
+                  )}
+                </div>
+                <p>{product.description}</p>
+              </Text>
             </Column>
           </Grid>
         </div>
