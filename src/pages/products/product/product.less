@@ -1,0 +1,30 @@
+@import "../../../styles/variables.less";
+.product-info {
+  .product-image {
+    position: relative;
+    .badge {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: @campaignColor;
+      color: #fff;
+      z-index: 5;
+      font-size: 1rem;
+      padding: 1rem;
+    }
+  }
+  .price-container {
+    .price {
+      color: @priceColor;
+      font-size: 2rem;
+      font-weight: @fontWeightMedium;
+      &.discount {
+        color: @campaignColor;
+      }
+    }
+    .regular-price {
+      text-decoration: line-through;
+      color: @regularPriceColor;
+    }
+  }
+}
