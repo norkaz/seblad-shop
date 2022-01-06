@@ -11,6 +11,7 @@ export default function Home() {
       <Helmet>
         <title>{siteData.name} - Hem </title>
         <meta property="og:type" content="content-page" />
+        <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
       </Helmet>
       <Structure>
         <Video
@@ -67,6 +68,20 @@ export default function Home() {
                 src={"https://facegram.se/CDN/dreja-instagram-640x360.m4v"}
               />
             </div>
+          </div>
+          <div className="grid">
+            <iframe
+              title="instagram"
+              src="//lightwidget.com/widgets/b030bd5dd1da52e9b2ae3d4e060d4178.html"
+              scrolling="no"
+              allowtransparency="true"
+              className="lightwidget-widget"
+              style={{
+                width: "100%",
+                overflow: "hidden",
+                border: "0",
+              }}
+            ></iframe>
           </div>
           <div className="grid">
             <div className="column">

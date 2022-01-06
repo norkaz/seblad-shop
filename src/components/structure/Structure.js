@@ -43,18 +43,18 @@ export default function Structure({ children }) {
         <div id="main">
           <Header />
           <Navigation
-            type="horizontal"
-            class="main-navigation"
-            menu="mainMenu"
+            classType="horizontal"
+            className="main-navigation"
+            menuName="mainMenu"
           />
           <Content>{children}</Content>
           <Footer />
         </div>
         <SideBar type="left">
           <Navigation
-            type="vertical"
-            class="sidebar-navigation"
-            menu="mainMenu"
+            classType="vertical"
+            className="sidebar-navigation"
+            menuName="mainMenu"
           />
         </SideBar>
         <SideBarOverlay />

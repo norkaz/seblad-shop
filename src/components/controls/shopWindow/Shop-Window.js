@@ -6,6 +6,7 @@ import Img from "../img/Img"
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
 
+const imgRoute = "https://facegram.se/CDNproducts/articlenumbers/"
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -41,6 +42,8 @@ export default function ProductList(props) {
             product.artNr +
             "-" +
             product.intro.replace(/\s/g, "_")
+
+          const productImgUrl = [imgRoute, product.artNr, ".jpg"].join("")
           return (
             <div key={key} className="item">
               <Link to={productUrl}>
@@ -52,11 +55,7 @@ export default function ProductList(props) {
                       </span>
                     ) : null}
                     <Img
-                      src={
-                        "https://facegram.se/CDNproducts/articlenumbers/" +
-                        product.artNr +
-                        ".jpg"
-                      }
+                      src={productImgUrl}
                       alt={product.name}
                       width="400px"
                       height="400px"

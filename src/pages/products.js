@@ -3,6 +3,7 @@ import Structure from "../components/structure/Structure"
 import { Helmet } from "react-helmet"
 import { siteData } from "../data/site/sitedata"
 import Img from "../components/controls/img/Img"
+import Navigation from "../components/navigations/navigation/Navigation"
 import ShopWindow from "../components/controls/shopWindow/Shop-Window"
 
 export default function Home() {
