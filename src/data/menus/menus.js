@@ -18,4 +18,16 @@ export const menus = {
     },
   ],
   footerMenu: [],
+  mobileMenuLeft: [
+    {
+      name: "Produkter",
+      url: "/products",
+    },
+  ],
+  mobileMenuRight: [
+    {
+      name: "Instagram",
+      url: "/instagram",
+    },
+  ],
 }

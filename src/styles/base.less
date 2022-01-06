@@ -76,6 +76,26 @@ p {
   --headerTextColor: @headerTextColor;
 }
 
+@scroll-size: 10px;
+@scroll-foreground-color: #aaa;
+@scroll-background-color: #fefefe;
+@media screen and (min-width: @breakPointFirst) {
+  // For Chrome & Safari
+  &::-webkit-scrollbar {
+    width: @scroll-size;
+    height: @scroll-size;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: @scroll-foreground-color;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+  &::-webkit-scrollbar-track {
+    background: @scroll-background-color;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+}
+
 div.grid {
   display: flex;
   flex-wrap: wrap;
@@ -85,13 +105,16 @@ div.grid {
     width: 100%;
     @media screen and (min-width: @breakPointFirst) {
       flex: 1 1;
+      padding: 0 @defaultPadding / 2;
     }
 
     @media screen and (max-width: @breakPointFirst) and (min-width: @breakPointSecond) {
       flex: 1 1;
+      padding: 0 @defaultPadding / 2;
     }
     @media screen and (max-width: @breakPointSecond) and (min-width: @breakPointThird) {
       flex: 1 1;
+      padding: 0 @defaultPadding / 2;
     }
     @media screen and (max-width: @breakPointThird) {
     }
@@ -169,5 +192,16 @@ div.grid {
   }
   body {
     font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: @breakPointThird) {
+  &.hide-mobile {
+    display: none !important;
+  }
+}
+@media screen and (min-width: @breakPointThird) {
+  &.only-mobile {
+    display: none !important;
   }
 }

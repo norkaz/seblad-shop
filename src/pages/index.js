@@ -15,7 +15,8 @@ export default function Home() {
       </Helmet>
       <Structure>
         <Video
-          height={"300px"}
+          hideInMobile={true}
+          height={"auto"}
           poster={"https://facegram.se/CDN/9-2.jpg"}
           autoplay
           loop
@@ -24,6 +25,31 @@ export default function Home() {
           type="video/mp4"
           src={"https://facegram.se/CDN/centrera-facebook-1920x1080.m4v"}
         />
+
+        <div className="section">
+          <div className="grid">
+            <div className="column">
+              <Img
+                link="/products"
+                color="#FFF"
+                header="produkter"
+                headerTag="h3"
+                src="https://facegram.se/CDN/13-2.jpg"
+              />
+            </div>
+            <div className="column hide-mobile">
+              <Video
+                hideInMobile={true}
+                autoplay={true}
+                loop={true}
+                muted={true}
+                width="100%"
+                type="video/mp4"
+                src={"https://facegram.se/CDN/dreja-instagram-640x360.m4v"}
+              />
+            </div>
+          </div>
+        </div>
         <div className="section">
           <div className="grid">
             <div className="column">
@@ -48,47 +74,12 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="grid">
-            <div className="column">
-              <Img
-                link="/products"
-                color="#FFF"
-                header="produkter"
-                headerTag="h3"
-                src="https://facegram.se/CDN/13-2.jpg"
-              />
-            </div>
-            <div className="column">
-              <Video
-                autoplay={true}
-                loop={true}
-                muted={true}
-                width="100%"
-                type="video/mp4"
-                src={"https://facegram.se/CDN/dreja-instagram-640x360.m4v"}
-              />
-            </div>
-          </div>
-          <div className="grid">
-            <iframe
-              title="instagram"
-              src="//lightwidget.com/widgets/b030bd5dd1da52e9b2ae3d4e060d4178.html"
-              scrolling="no"
-              allowtransparency="true"
-              className="lightwidget-widget"
-              style={{
-                width: "100%",
-                overflow: "hidden",
-                border: "0",
-              }}
-            ></iframe>
-          </div>
+        </div>
+        <div className="section full">
           <div className="grid">
             <div className="column">
               <Img src="https://facegram.se/CDN/9-2.jpg" />
             </div>
-          </div>
-          <div className="grid">
             <div className="column">
               <Img src="https://facegram.se/CDN/19-2.jpg" />
             </div>

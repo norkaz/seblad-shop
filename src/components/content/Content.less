@@ -11,14 +11,22 @@
     max-width: 100%;
     width: @contentWidth;
     margin: 0 auto;
+    @media screen and (min-width: @breakPointFirst) {
+      margin: @defaultPadding auto;
+    }
     @media screen and (max-width: @breakPointFirst) and (min-width: @breakPointSecond) {
       width: @contentWidthBreakFirst;
+      margin: @defaultPadding auto;
     }
     @media screen and (max-width: @breakPointSecond) and (min-width: @breakPointThird) {
       width: @contentWidthBreakSecond;
+      margin: @defaultPadding auto;
     }
     @media screen and (max-width: @breakPointThird) {
       width: @contentWidthBreakThird;
+    }
+    &.full {
+      width: 100%;
     }
   }
 }

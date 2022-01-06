@@ -10,7 +10,7 @@
   justify-content: center;
 
   img {
-    max-height: 100%;
+    height: 100%;
   }
 
   &.popup {
@@ -18,7 +18,7 @@
     .fa-search-plus {
       pointer-events: none;
       padding: 1rem;
-      font-size: 2rem;
+      font-size: 1.2rem;
       box-sizing: content-box;
       position: absolute;
       top: 0;
@@ -49,30 +49,10 @@
   }
 }
 @media screen and (max-width: 1920px) {
-  .full {
-    .resp-img {
-      background-size: 1920px;
-    }
-  }
 }
 @media screen and (max-width: @breakPointFirst) and (min-width: @breakPointSecond) {
-  .full {
-    .resp-img {
-      background-size: @breakPointFirst;
-    }
-  }
 }
 @media screen and (max-width: @breakPointSecond) and (min-width: @breakPointThird) {
-  .full {
-    .resp-img {
-      background-size: @breakPointSecond;
-    }
-  }
 }
 @media screen and (max-width: @breakPointThird) {
-  .full {
-    .resp-img {
-      background-size: @breakPointThird;
-    }
-  }
 }

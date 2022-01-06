@@ -6,17 +6,22 @@ import Navigation from "../navigations/navigation/Navigation"
 import SideBar from "../sidebar/Side-Bar"
 import Content from "../content/Content"
 import SideBarOverlay from "../sidebar/Side-Bar-Overlay"
+import InstagramWidget from "../controls/instagramWidget/Instagram-Widget"
 import Footer from "../footer/Footer"
 import "../../styles/base.less"
 import "./Structure.less"
 
-export default function Structure({ children }) {
+export default function Structure({ children, hideInstagram }) {
   return (
     <>
       <Helmet>
         <meta name="description" content={siteData.description} />
         <meta property="og:title" content={siteData.name} />
         <meta property="og:image" content={siteData.ogImage} />
+        <script
+          async
+          src="https://cdn.lightwidget.com/widgets/lightwidget.js"
+        ></script>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -47,7 +52,21 @@ export default function Structure({ children }) {
             className="main-navigation"
             menuName="mainMenu"
           />
-          <Content>{children}</Content>
+          <Content>
+            {children}
+            {hideInstagram ? null : (
+              <div className="section">
+                <div className="grid">
+                  <div className="column">
+                    <InstagramWidget
+                      lightWidgetId={"b030bd5dd1da52e9b2ae3d4e060d4178"}
+                      title={"Senaste från Instagram @sebladkeramik"}
+                    />
+                  </div>
+                </div>
+              </div>
+            )}
+          </Content>
           <Footer />
         </div>
         <SideBar type="left">
