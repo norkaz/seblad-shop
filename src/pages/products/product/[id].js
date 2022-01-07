@@ -150,27 +150,25 @@ export default function Product(props) {
                       <input
                         type="text"
                         name="produkt"
-                        value={product.name}
-                        readOnly
+                        defaultValue={product.name}
                       />
                       <input
                         type="text"
                         name="artikelnummer"
-                        value={product.id}
-                        readOnly
+                        defaultValue={product.id}
                       />
                       <input
                         type="text"
                         name="pris"
-                        value={[totalPrice, product.currency].join(" ")}
-                        readOnly
+                        defaultValue={[totalPrice, product.currency].join(" ")}
                       />
                       {savingPrice && (
                         <input
                           type="text"
                           name="REA"
-                          value={[savingPrice, product.currency].join(" ")}
-                          readOnly
+                          defaultValue={[savingPrice, product.currency].join(
+                            " "
+                          )}
                         />
                       )}
                     </label>
