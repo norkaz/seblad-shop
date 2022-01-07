@@ -146,29 +146,9 @@ export default function Product(props) {
                   </p>
                   <p>
                     <label>
-                      <input
-                        type="text"
-                        name="produkt"
-                        defaultValue={product.name}
-                        readOnly
-                      />
-                      <input type="text" name="artikelnummer" />
-                      <input
-                        type="text"
-                        name="pris"
-                        defaultValue={[totalPrice, product.currency].join(" ")}
-                        readOnly
-                      />
-                      {savingPrice ? (
-                        <input
-                          type="text"
-                          name="REA"
-                          defaultValue={[savingPrice, product.currency].join(
-                            " "
-                          )}
-                          readOnly
-                        />
-                      ) : null}
+                      extra:
+                      <br />
+                      <input type="text" name="extra" onChange={handleChange} />
                     </label>
                   </p>
                   <p>
