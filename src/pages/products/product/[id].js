@@ -152,6 +152,31 @@ export default function Product(props) {
                     </label>
                   </p>
                   <p>
+                    <label>
+                      extra:
+                      <br />
+                      <input
+                        type="text"
+                        name="another"
+                        value="change me please"
+                        onChange={handleChange}
+                      />
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      extra:
+                      <br />
+                      <input
+                        type="text"
+                        name="anotherone"
+                        value="you cannot change me"
+                        readOnly
+                        onChange={handleChange}
+                      />
+                    </label>
+                  </p>
+                  <p>
                     <button type="submit">Beställ</button>
                   </p>
                 </form>
