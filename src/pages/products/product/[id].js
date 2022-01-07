@@ -158,7 +158,7 @@ export default function Product(props) {
                       <input
                         type="text"
                         name="another"
-                        value="change me please"
+                        defaultValue="change me please"
                         onChange={handleChange}
                       />
                     </label>
@@ -170,9 +170,45 @@ export default function Product(props) {
                       <input
                         type="text"
                         name="anotherone"
-                        value="you cannot change me"
+                        defaultValue="you cannot change me"
                         readOnly
                         onChange={handleChange}
+                      />
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      extra:
+                      <br />
+                      <input
+                        type="text"
+                        name="produktnamnread"
+                        readOnly
+                        defaultValue={product.name}
+                        onChange={handleChange}
+                      />
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      extra:
+                      <br />
+                      <input
+                        type="text"
+                        name="produktnamn"
+                        defaultValue={product.name}
+                        onChange={handleChange}
+                      />
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      extra:
+                      <br />
+                      <input
+                        type="text"
+                        name="produktnamnet"
+                        defaultValue={product.name}
                       />
                     </label>
                   </p>
