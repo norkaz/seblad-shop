@@ -29,7 +29,7 @@ export default function Footer() {
               <a
                 target="_blank"
                 rel="noreferrer"
-                href="https://www.facebook.com/search/top?q=seblad%20keramik"
+                href="https://www.facebook.com/sebladkeramik"
               >
                 {" "}
                 <FontAwesomeIcon icon={faFacebook} /> Seblad Keramik
