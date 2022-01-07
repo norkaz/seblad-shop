@@ -40,9 +40,7 @@ export default function Product(props) {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        "form-name": form.getAttribute(
-          [product.name, product.id, totalPrice].join(" ")
-        ),
+        "form-name": [product.name, product.id, totalPrice].join(" "),
         ...state,
       }),
     })
