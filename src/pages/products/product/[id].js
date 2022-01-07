@@ -148,11 +148,11 @@ export default function Product(props) {
                     <label>
                       extra:
                       <br />
-                      <textarea
+                      <input
+                        type="text"
                         name="extra"
+                        defaultValue={product.name}
                         onLoad={handleChange}
-                        value={product.name}
-                        onChange={handleChange}
                       />
                     </label>
                   </p>
@@ -160,11 +160,11 @@ export default function Product(props) {
                     <label>
                       extra:
                       <br />
-                      <textarea
+                      <input
+                        type="text"
                         name="extraagain"
-                        value={product.name}
+                        defaultValue={product.name}
                         onLoad={handleChange}
-                        onChange={handleChange}
                       />
                     </label>
                   </p>
