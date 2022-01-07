@@ -151,26 +151,26 @@ export default function Product(props) {
                         type="text"
                         name="produkt"
                         value={product.name}
-                        onChange={handleChange}
+                        readOnly
                       />
                       <input
                         type="text"
                         name="artikelnummer"
                         value={product.id}
-                        onChange={handleChange}
+                        readOnly
                       />
                       <input
                         type="text"
                         name="pris"
                         value={[totalPrice, product.currency].join(" ")}
-                        onChange={handleChange}
+                        readOnly
                       />
                       {savingPrice && (
                         <input
                           type="text"
                           name="REA"
                           value={[savingPrice, product.currency].join(" ")}
-                          onChange={handleChange}
+                          readOnly
                         />
                       )}
                     </label>
