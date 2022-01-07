@@ -24,6 +24,9 @@ export default function Product(props) {
   const savingPrice = Math.round(
     product.price * (product.discountPercent / 100)
   )
+
+  const totalPrice = product.price - savingPrice
+
   const [state, setState] = React.useState({})
 
   const handleChange = e => {
@@ -94,7 +97,7 @@ export default function Product(props) {
                   {savingPrice ? (
                     <>
                       <div className="price discount">
-                        {product.price - savingPrice} {product.currency}
+                        {totalPrice} {product.currency}
                       </div>
                       <div className="regular-price">
                         {product.price} {product.currency}
@@ -102,13 +105,11 @@ export default function Product(props) {
                     </>
                   ) : (
                     <div className="price">
-                      {product.price} {product.currency}
+                      {totalPrice} {product.currency}
                     </div>
                   )}
                 </div>
                 <p>{product.description}</p>
-              </div>
-              <div>
                 <form
                   name="contact"
                   method="post"
@@ -119,22 +120,22 @@ export default function Product(props) {
                 >
                   {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
                   <input type="hidden" name="form-name" value="contact" />
-                  <p hidden>
+                  <div hidden>
                     <label>
                       Don’t fill this out:{" "}
                       <input name="bot-field" onChange={handleChange} />
                     </label>
-                  </p>
+                  </div>
                   <p>
                     <label>
-                      Your name:
+                      Ditt namn:
                       <br />
                       <input type="text" name="name" onChange={handleChange} />
                     </label>
                   </p>
                   <p>
                     <label>
-                      Your email:
+                      Din e-postadress:
                       <br />
                       <input
                         type="email"
@@ -143,15 +144,39 @@ export default function Product(props) {
                       />
                     </label>
                   </p>
-                  <p>
+                  <p hidden>
                     <label>
-                      Message:
                       <br />
-                      <textarea name="message" onChange={handleChange} />
+                      <input
+                        type="text"
+                        name="produkt"
+                        value={product.name}
+                        onChange={handleChange}
+                      />
+                      <input
+                        type="text"
+                        name="artikelnummer"
+                        value={product.id}
+                        onChange={handleChange}
+                      />
+                      <input
+                        type="text"
+                        name="pris"
+                        value={[totalPrice, product.currency].join(" ")}
+                        onChange={handleChange}
+                      />
+                      {savingPrice && (
+                        <input
+                          type="text"
+                          name="REA"
+                          value={[savingPrice, product.currency].join(" ")}
+                          onChange={handleChange}
+                        />
+                      )}
                     </label>
                   </p>
                   <p>
-                    <button type="submit">Send</button>
+                    <button type="submit">Beställ</button>
                   </p>
                 </form>
               </div>
