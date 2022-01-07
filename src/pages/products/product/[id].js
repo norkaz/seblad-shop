@@ -151,8 +151,9 @@ export default function Product(props) {
                       <input
                         type="text"
                         name="extra"
-                        defaultValue={product.name}
+                        value={product.name}
                         onLoad={handleChange}
+                        onChange={handleChange}
                       />
                     </label>
                   </p>
@@ -163,8 +164,9 @@ export default function Product(props) {
                       <input
                         type="text"
                         name="extraagain"
-                        defaultValue={product.name}
+                        value={product.name}
                         onLoad={handleChange}
+                        onChange={handleChange}
                       />
                     </label>
                   </p>
