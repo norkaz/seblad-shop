@@ -152,7 +152,7 @@ export default function Product(props) {
                         defaultValue={product.name}
                         readOnly
                       />
-                      <input type="text" name="artikelnummer" readOnly />
+                      <input type="text" name="artikelnummer" />
                       <input
                         type="text"
                         name="pris"
