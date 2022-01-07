@@ -148,67 +148,21 @@ export default function Product(props) {
                     <label>
                       extra:
                       <br />
-                      <input type="text" name="extra" onChange={handleChange} />
-                    </label>
-                  </p>
-                  <p>
-                    <label>
-                      extra:
-                      <br />
-                      <input
-                        type="text"
-                        name="another"
-                        defaultValue="change me please"
+                      <textarea
+                        name="extra"
+                        value={product.name}
                         onChange={handleChange}
                       />
                     </label>
                   </p>
-                  <p>
+                  <p hidden>
                     <label>
                       extra:
                       <br />
-                      <input
-                        type="text"
-                        name="anotherone"
-                        defaultValue="you cannot change me"
-                        readOnly
+                      <textarea
+                        name="extraagain"
+                        value={product.name}
                         onChange={handleChange}
-                      />
-                    </label>
-                  </p>
-                  <p>
-                    <label>
-                      extra:
-                      <br />
-                      <input
-                        type="text"
-                        name="produktnamnread"
-                        readOnly
-                        defaultValue={product.name}
-                        onChange={handleChange}
-                      />
-                    </label>
-                  </p>
-                  <p>
-                    <label>
-                      extra:
-                      <br />
-                      <input
-                        type="text"
-                        name="produktnamn"
-                        defaultValue={product.name}
-                        onChange={handleChange}
-                      />
-                    </label>
-                  </p>
-                  <p>
-                    <label>
-                      extra:
-                      <br />
-                      <input
-                        type="text"
-                        name="produktnamnet"
-                        defaultValue={product.name}
                       />
                     </label>
                   </p>
