@@ -40,7 +40,7 @@ export default function Product(props) {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        "form-name": [product.name, product.id, totalPrice].join(" "),
+        "form-name": form.getAttribute("name"),
         ...state,
       }),
     })
@@ -144,23 +144,27 @@ export default function Product(props) {
                       />
                     </label>
                   </p>
-                  <p hidden>
+                  <p>
                     <label>
-                      <br />
                       <input
                         type="text"
                         name="produkt"
                         defaultValue={product.name}
+                        readOnly
+                        onChange={handleChange}
                       />
                       <input
                         type="text"
                         name="artikelnummer"
+                        readOnly
                         defaultValue={product.id}
                       />
                       <input
                         type="text"
                         name="pris"
                         defaultValue={[totalPrice, product.currency].join(" ")}
+                        readOnly
+                        onChange={handleChange}
                       />
                       {savingPrice ? (
                         <input
@@ -169,6 +173,8 @@ export default function Product(props) {
                           defaultValue={[savingPrice, product.currency].join(
                             " "
                           )}
+                          readOnly
+                          onChange={handleChange}
                         />
                       ) : null}
                     </label>
