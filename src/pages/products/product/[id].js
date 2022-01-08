@@ -43,10 +43,10 @@ export default function Product(props) {
       body: encode({
         "form-name": form.getAttribute("name"),
         ...state,
-        "produkt-namn": product.name,
-        "produkt-id": product.id,
-        "produkt-pris": totalPrice,
-        "produkt-rea": savingPrice,
+        produkt: product.name,
+        artikelnummer: product.id,
+        pris: totalPrice,
+        rea: savingPrice,
       }),
     })
       .then(() => navigate(form.getAttribute("action")))
