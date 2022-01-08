@@ -43,12 +43,12 @@ export default function Product(props) {
       body: encode({
         "form-name": form.getAttribute("name"),
         fake,
-        "produkt-namn": product.name,
+        produkt: product.name,
         artikelnummer: product.id,
         summa: [totalPrice, product.currency].join(" "),
         rabatt: [savingPrice, product.currency].join(" "),
         amount,
-        orderSum,
+        totalsumma: orderSum,
         name,
         email,
         phoneNumber,
@@ -107,7 +107,7 @@ export default function Product(props) {
                   {savingPrice ? (
                     <>
                       <div className="price discount">
-                        {totalPrice} {product.currency}
+                        {orderSum} {product.currency}
                       </div>
                       <div className="regular-price">
                         {product.price} {product.currency}
@@ -115,7 +115,7 @@ export default function Product(props) {
                     </>
                   ) : (
                     <div className="price">
-                      {totalPrice} {product.currency}
+                      {orderSum} {product.currency}
                     </div>
                   )}
                 </div>
@@ -187,7 +187,7 @@ export default function Product(props) {
                   <div className="grid">
                     <div className="column">
                       <label>
-                        <input hidden name="produkt-namn" />
+                        <input hidden name="produkt" />
                         <input hidden name="artikelnummer" />
                         <input hidden name="summa" />
                         <input hidden name="rabatt" />
