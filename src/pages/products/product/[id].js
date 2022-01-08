@@ -36,6 +36,7 @@ export default function Product(props) {
 
   console.log(state)
   console.log(product)
+
   const handleSubmit = e => {
     e.preventDefault()
     const form = e.target
@@ -45,7 +46,7 @@ export default function Product(props) {
       body: encode({
         "form-name": form.getAttribute("name"),
         ...state,
-        product,
+        ...product,
       }),
     })
       .then(() => navigate(form.getAttribute("action")))
