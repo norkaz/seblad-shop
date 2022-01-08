@@ -5,14 +5,8 @@ import { Helmet } from "react-helmet"
 import { products } from "../../../data/products/products"
 import Structure from "../../../components/structure/Structure"
 import Img from "../../../components/controls/img/Img"
-import { navigate } from "gatsby-link"
+import BuyForm from "../../../components/controls/buyForm/Buy-Form"
 import ShopWindow from "../../../components/controls/shopWindow/Shop-Window"
-
-function encode(data) {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&")
-}
 
 export default function Product(props) {
   const splat = props.params.id || "1"
@@ -26,39 +20,8 @@ export default function Product(props) {
   )
 
   const totalPrice = product.price - savingPrice
-
-  const [fake, setFake] = useState("")
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [phoneNumber, setPhoneNumber] = useState("")
   const [amount, setAmount] = useState(1)
   const orderSum = totalPrice * amount
-
-  const handleSubmit = e => {
-    e.preventDefault()
-    const form = e.target
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": form.getAttribute("name"),
-        fake,
-        produkt: product.name,
-        artikelnummer: product.id,
-        summa: [totalPrice, product.currency].join(" "),
-        rabatt: [savingPrice, product.currency].join(" "),
-        amount,
-        totalsumma: [orderSum, product.currency].join(" "),
-        name,
-        email,
-        phoneNumber,
-      }),
-    })
-      .then(() => navigate(form.getAttribute("action")))
-      .catch(error => alert(error))
-  }
-  console.log(product.artNr)
-  console.log(Img.src)
   return (
     <>
       <Helmet>
@@ -124,95 +87,14 @@ export default function Product(props) {
                   )}
                 </div>
                 <p>{product.description}</p>
-                <form
-                  className="product-form"
-                  name="contact"
-                  method="post"
-                  action="/thank-you/"
-                  data-netlify="true"
-                  data-netlify-honeypot="fake"
-                  onSubmit={handleSubmit}
-                >
-                  {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-                  <input type="hidden" name="form-name" value="contact" />
-                  <div hidden>
-                    <label>
-                      Don’t fill this out:{" "}
-                      <input
-                        name="fake"
-                        value={fake}
-                        onChange={event => setFake(event.target.value)}
-                      />
-                    </label>
-                  </div>
-                  <div className="grid">
-                    <div className="column">
-                      <label>
-                        <div>För och efternamn</div>
-                        <input
-                          placeholder="Andreas Svensson"
-                          type="text"
-                          required
-                          name="name"
-                          value={name}
-                          onChange={event => setName(event.target.value)}
-                        />
-                      </label>
-                    </div>
-                    <div className="column">
-                      <label>
-                        <div>E-postadress</div>
-                        <input
-                          placeholder="example@gmail.com"
-                          type="email"
-                          name="email"
-                          required
-                          value={email}
-                          onChange={event => setEmail(event.target.value)}
-                        />
-                      </label>
-                    </div>
-                  </div>
-                  <div className="grid">
-                    <div className="column">
-                      <label>
-                        <div>Mobilnummer</div>
-                        <input
-                          placeholder="+46701234567"
-                          type="text"
-                          name="phoneNumber"
-                          required
-                          value={phoneNumber}
-                          onChange={event => setPhoneNumber(event.target.value)}
-                        />
-                      </label>
-                    </div>
-                  </div>
-                  <div className="grid">
-                    <div className="column">
-                      <label>
-                        <input hidden name="produkt" />
-                        <input hidden name="artikelnummer" />
-                        <input hidden name="summa" />
-                        <input hidden name="rabatt" />
-                        <input
-                          className="quantity"
-                          type="number"
-                          min="1"
-                          max="10"
-                          name="amount"
-                          value={amount}
-                          onChange={event => setAmount(event.target.value)}
-                        />
-                        St
-                      </label>
-                    </div>
-                  </div>
-                  <input hidden name="totalsumma" />
-                  <p>
-                    <button type="submit">Beställ</button>
-                  </p>
-                </form>
+                <BuyForm
+                  totalPrice={totalPrice}
+                  product={product}
+                  savingPrice={savingPrice}
+                  orderSum={orderSum}
+                  amount={amount}
+                  setAmount={setAmount}
+                />
               </div>
             </div>
           </div>
