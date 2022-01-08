@@ -147,7 +147,7 @@ export default function Product(props) {
                     value={email}
                     onChange={event => setEmail(event.target.value)}
                   />
-                  <input hidden name="productName" value={product.name} />
+                  <input hidden name="productName" />
                   <p>
                     <button type="submit">Beställ</button>
                   </p>
