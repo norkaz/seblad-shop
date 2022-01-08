@@ -57,6 +57,8 @@ export default function Product(props) {
       .then(() => navigate(form.getAttribute("action")))
       .catch(error => alert(error))
   }
+  console.log(product.artNr)
+  console.log(Img.src)
   return (
     <>
       <Helmet>
@@ -72,7 +74,8 @@ export default function Product(props) {
           headertag="h1"
           color="#FFF"
           shadow={false}
-        />
+        ></Img>
+        <div className="test"></div>
         <div className="section product-info">
           <div className="grid">
             <div className="column">
@@ -82,18 +85,16 @@ export default function Product(props) {
                 ) : null}
                 <Img
                   popup={true}
-                  srcLarge={
-                    "https://facegram.se/CDNproducts/articlenumbers/" +
-                    product.artNr +
-                    "_XL" +
-                    ".jpg"
-                  }
-                  src={
-                    "https://facegram.se/CDNproducts/articlenumbers/" +
-                    product.artNr +
-                    "_L" +
-                    ".jpg"
-                  }
+                  srcLarge={[
+                    "https://facegram.se/CDNproducts/articlenumbers/",
+                    product.artNr,
+                    "_XL.jpg",
+                  ].join("")}
+                  src={[
+                    "https://facegram.se/CDNproducts/articlenumbers/",
+                    product.artNr,
+                    "_L.jpg",
+                  ].join("")}
                   alt={product.name}
                   width="400px"
                   height="400px"
@@ -104,7 +105,7 @@ export default function Product(props) {
               <div className="text-box">
                 <h2>{product.intro}</h2>
                 <div className="price-container">
-                  {savingPrice ? (
+                  {product.discountPercent > 0 && (
                     <>
                       <div className="price discount">
                         {orderSum} {product.currency}
@@ -113,10 +114,13 @@ export default function Product(props) {
                         {product.price} {product.currency}
                       </div>
                     </>
-                  ) : (
-                    <div className="price">
-                      {orderSum} {product.currency}
-                    </div>
+                  )}
+                  {product.discountPercent <= 0 && (
+                    <>
+                      <div className="price">
+                        {orderSum} {product.currency}
+                      </div>
+                    </>
                   )}
                 </div>
                 <p>{product.description}</p>
