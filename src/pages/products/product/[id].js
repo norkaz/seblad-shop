@@ -44,8 +44,8 @@ export default function Product(props) {
         fake,
         productName: product.name,
         productId: product.id,
-        productPrice: totalPrice,
-        discountPrice: savingPrice,
+        productPrice: [totalPrice, product.currency].join(" "),
+        discountPrice: [savingPrice, product.currency].join(" "),
         amount,
         name,
         email,
@@ -173,8 +173,8 @@ export default function Product(props) {
                         <div>Mobilnummer</div>
                         <input
                           placeholder="+46701234567"
-                          type="email"
-                          name="email"
+                          type="text"
+                          name="phoneNumber"
                           required
                           value={phoneNumber}
                           onChange={event => setPhoneNumber(event.target.value)}
@@ -198,8 +198,10 @@ export default function Product(props) {
                       </label>
                     </div>
                   </div>
-
                   <input hidden name="productName" />
+                  <input hidden name="productId" />
+                  <input hidden name="productPrice" />
+                  <input hidden name="discountPrice" />
                   <p>
                     <button type="submit">Beställ</button>
                   </p>
