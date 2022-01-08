@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import "./product.less"
 import { siteData } from "../../../data/site/sitedata"
-
 import { Helmet } from "react-helmet"
 import Structure from "../../../components/structure/Structure"
 import Img from "../../../components/controls/img/Img"
@@ -32,7 +31,7 @@ export default function Product(props) {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
 
-  console.log({ name })
+  console.log(product.name)
 
   const handleSubmit = e => {
     e.preventDefault()
@@ -148,6 +147,7 @@ export default function Product(props) {
                     value={email}
                     onChange={event => setEmail(event.target.value)}
                   />
+                  <input hidden name="productName" value={product.name} />
                   <p>
                     <button type="submit">Beställ</button>
                   </p>
