@@ -32,6 +32,7 @@ export default function Product(props) {
   const [email, setEmail] = useState("")
   const [phoneNumber, setPhoneNumber] = useState("")
   const [amount, setAmount] = useState(1)
+  const orderSum = totalPrice * amount
 
   const handleSubmit = e => {
     e.preventDefault()
@@ -47,6 +48,7 @@ export default function Product(props) {
         summa: [totalPrice, product.currency].join(" "),
         rabatt: [savingPrice, product.currency].join(" "),
         amount,
+        orderSum,
         name,
         email,
         phoneNumber,
@@ -187,6 +189,8 @@ export default function Product(props) {
                       <label>
                         <input hidden name="produkt-namn" />
                         <input hidden name="artikelnummer" />
+                        <input hidden name="summa" />
+                        <input hidden name="rabatt" />
                         <input
                           className="quantity"
                           type="number"
@@ -200,8 +204,7 @@ export default function Product(props) {
                       </label>
                     </div>
                   </div>
-                  <input hidden name="summa" />
-                  <input hidden name="rabatt" />
+                  <input hidden name="totalsumma" />
                   <p>
                     <button type="submit">Beställ</button>
                   </p>
