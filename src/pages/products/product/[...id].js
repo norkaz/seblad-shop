@@ -2,11 +2,11 @@ import React, { useState } from "react"
 import "./product.less"
 import { siteData } from "../../../data/site/sitedata"
 import { Helmet } from "react-helmet"
+import { products } from "../../../data/products/products"
 import Structure from "../../../components/structure/Structure"
 import Img from "../../../components/controls/img/Img"
-import { products } from "../../../data/products/products"
-import ShopWindow from "../../../components/controls/shopWindow/Shop-Window"
 import { navigate } from "gatsby-link"
+import ShopWindow from "../../../components/controls/shopWindow/Shop-Window"
 
 function encode(data) {
   return Object.keys(data)
