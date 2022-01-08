@@ -74,7 +74,7 @@ export default function Product(props) {
                         {orderSum} {product.currency}
                       </div>
                       <div className="regular-price">
-                        {product.price} {product.currency}
+                        {product.price * amount} {product.currency}
                       </div>
                     </>
                   )}

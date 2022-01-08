@@ -68,8 +68,8 @@ export default function BuyForm({
       </div>
       <div className="grid">
         <div className="column">
-          <div>För och efternamn</div>
           <Input
+            label={"För- och efternamn"}
             placeholder="Andreas Svensson"
             type="text"
             required
@@ -80,8 +80,8 @@ export default function BuyForm({
           />
         </div>
         <div className="column">
-          <div>E-postadress</div>
           <Input
+            label={"E-postadress"}
             placeholder="example@gmail.com"
             type="email"
             required
@@ -94,8 +94,8 @@ export default function BuyForm({
       </div>
       <div className="grid">
         <div className="column">
-          <div>Mobilnummer</div>
           <Input
+            label={"Mobilnummer"}
             placeholder="+46701234567"
             type="text"
             required
