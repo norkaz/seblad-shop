@@ -46,7 +46,7 @@ export default function ProductList(props) {
           const productImgUrl = [imgRoute, product.artNr, ".jpg"].join("")
           return (
             <div key={key} className="item">
-              <Link to={productUrl}>
+              <a href={productUrl}>
                 <div className="border-wrapper">
                   <div className="image">
                     {savingPrice ? (
@@ -82,7 +82,7 @@ export default function ProductList(props) {
                     </div>
                   </div>
                 </div>
-              </Link>
+              </a>
             </div>
           )
         })}
