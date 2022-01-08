@@ -34,6 +34,8 @@ export default function Product(props) {
     setState({ ...state, [e.target.name]: e.target.value })
   }
 
+  console.log(state)
+  console.log(product)
   const handleSubmit = e => {
     e.preventDefault()
     const form = e.target
@@ -43,10 +45,7 @@ export default function Product(props) {
       body: encode({
         "form-name": form.getAttribute("name"),
         ...state,
-        produkt: product.name,
-        artikelnummer: product.id,
-        pris: totalPrice,
-        rea: savingPrice,
+        product,
       }),
     })
       .then(() => navigate(form.getAttribute("action")))
