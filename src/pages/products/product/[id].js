@@ -48,7 +48,7 @@ export default function Product(props) {
         summa: [totalPrice, product.currency].join(" "),
         rabatt: [savingPrice, product.currency].join(" "),
         amount,
-        totalsumma: orderSum,
+        totalsumma: [orderSum, product.currency].join(" "),
         name,
         email,
         phoneNumber,
