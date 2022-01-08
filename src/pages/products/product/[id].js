@@ -42,10 +42,10 @@ export default function Product(props) {
       body: encode({
         "form-name": form.getAttribute("name"),
         fake,
-        productName: product.name,
-        productId: product.id,
-        productPrice: [totalPrice, product.currency].join(" "),
-        discountPrice: [savingPrice, product.currency].join(" "),
+        "produkt-namn": product.name,
+        artikelnummer: product.id,
+        summa: [totalPrice, product.currency].join(" "),
+        rabatt: [savingPrice, product.currency].join(" "),
         amount,
         name,
         email,
@@ -185,6 +185,8 @@ export default function Product(props) {
                   <div className="grid">
                     <div className="column">
                       <label>
+                        <input hidden name="produkt-namn" />
+                        <input hidden name="artikelnummer" />
                         <input
                           className="quantity"
                           type="number"
@@ -198,10 +200,8 @@ export default function Product(props) {
                       </label>
                     </div>
                   </div>
-                  <input hidden name="productName" />
-                  <input hidden name="productId" />
-                  <input hidden name="productPrice" />
-                  <input hidden name="discountPrice" />
+                  <input hidden name="summa" />
+                  <input hidden name="rabatt" />
                   <p>
                     <button type="submit">Beställ</button>
                   </p>
