@@ -30,6 +30,7 @@ export default function Product(props) {
   const [amount, setAmount] = useState(1)
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
+  const [fake, setFake] = useState("")
 
   console.log(product.name)
 
@@ -41,6 +42,7 @@ export default function Product(props) {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": form.getAttribute("name"),
+        fake,
         name,
         amount,
         email,
@@ -118,7 +120,7 @@ export default function Product(props) {
                   method="post"
                   action="/thank-you/"
                   data-netlify="true"
-                  data-netlify-honeypot="bot-field"
+                  data-netlify-honeypot="fake"
                   onSubmit={handleSubmit}
                 >
                   {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
@@ -127,8 +129,9 @@ export default function Product(props) {
                     <label>
                       Don’t fill this out:{" "}
                       <input
-                        name="bot-field"
-                        onChange={event => setName(event.target.value)}
+                        name="fake"
+                        value={fake}
+                        onChange={event => setFake(event.target.value)}
                       />
                     </label>
                   </div>
