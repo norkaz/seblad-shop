@@ -28,14 +28,9 @@ export default function Product(props) {
 
   const totalPrice = product.price - savingPrice
 
-  const [state, setState] = useState({})
-
-  const handleChange = e => {
-    setState({ ...state, [e.target.name]: e.target.value })
-  }
-
-  console.log(state)
-  console.log(product)
+  const [amount, setAmount] = useState(1)
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
 
   const handleSubmit = e => {
     e.preventDefault()
@@ -45,8 +40,10 @@ export default function Product(props) {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": form.getAttribute("name"),
-        ...state,
-        ...product,
+        name,
+        amount,
+        email,
+        productName: product.name,
       }),
     })
       .then(() => navigate(form.getAttribute("action")))
@@ -128,31 +125,26 @@ export default function Product(props) {
                   <div hidden>
                     <label>
                       Don’t fill this out:{" "}
-                      <input name="bot-field" onChange={handleChange} />
-                    </label>
-                  </div>
-                  <p>
-                    <label>
-                      Ditt namn:
-                      <br />
-                      <input type="text" name="name" onChange={handleChange} />
-                    </label>
-                  </p>
-                  <p>
-                    <label>
-                      Din e-postadres:
-                      <br />
                       <input
-                        type="email"
-                        name="epost"
-                        onChange={handleChange}
+                        name="bot-field"
+                        onChange={event => setName(event.target.value)}
                       />
                     </label>
-                  </p>
+                  </div>
+                  <input
+                    value={name}
+                    onChange={event => setName(event.target.value)}
+                  />
+                  <input
+                    value={amount}
+                    onChange={event => setAmount(event.target.value)}
+                  />
+                  <input
+                    value={email}
+                    onChange={event => setEmail(event.target.value)}
+                  />
                   <p>
-                    <button type="submit" onClick={handleChange}>
-                      Beställ
-                    </button>
+                    <button type="submit">Beställ</button>
                   </p>
                 </form>
               </div>
