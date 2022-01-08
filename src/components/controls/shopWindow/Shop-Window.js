@@ -1,7 +1,6 @@
 import React from "react"
 import "./Shop-Window.less"
 import { products } from "../../../data/products/products"
-import { Link } from "gatsby"
 import Img from "../img/Img"
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
