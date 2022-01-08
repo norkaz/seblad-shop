@@ -32,6 +32,8 @@ export default function Product(props) {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
 
+  console.log(name, email, amount)
+
   const handleSubmit = e => {
     e.preventDefault()
     const form = e.target
@@ -40,9 +42,9 @@ export default function Product(props) {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": form.getAttribute("name"),
-        name,
-        amount,
-        email,
+        name: name,
+        amount: amount,
+        email: email,
         productName: product.name,
       }),
     })
