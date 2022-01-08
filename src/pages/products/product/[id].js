@@ -27,12 +27,11 @@ export default function Product(props) {
 
   const totalPrice = product.price - savingPrice
 
-  const [amount, setAmount] = useState(1)
+  const [fake, setFake] = useState("")
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
-  const [fake, setFake] = useState("")
-
-  console.log(product.name)
+  const [phoneNumber, setPhoneNumber] = useState("")
+  const [amount, setAmount] = useState(1)
 
   const handleSubmit = e => {
     e.preventDefault()
@@ -43,10 +42,14 @@ export default function Product(props) {
       body: encode({
         "form-name": form.getAttribute("name"),
         fake,
-        name,
-        amount,
-        email,
         productName: product.name,
+        productId: product.id,
+        productPrice: totalPrice,
+        discountPrice: savingPrice,
+        amount,
+        name,
+        email,
+        phoneNumber,
       }),
     })
       .then(() => navigate(form.getAttribute("action")))
@@ -116,6 +119,7 @@ export default function Product(props) {
                 </div>
                 <p>{product.description}</p>
                 <form
+                  className="product-form"
                   name="contact"
                   method="post"
                   action="/thank-you/"
@@ -135,21 +139,66 @@ export default function Product(props) {
                       />
                     </label>
                   </div>
-                  <input
-                    name="name"
-                    value={name}
-                    onChange={event => setName(event.target.value)}
-                  />
-                  <input
-                    name="amount"
-                    value={amount}
-                    onChange={event => setAmount(event.target.value)}
-                  />
-                  <input
-                    name="email"
-                    value={email}
-                    onChange={event => setEmail(event.target.value)}
-                  />
+                  <div className="grid">
+                    <div className="column">
+                      <label>
+                        <div>För och efternamn</div>
+                        <input
+                          placeholder="Andreas Svensson"
+                          type="text"
+                          required
+                          name="name"
+                          value={name}
+                          onChange={event => setName(event.target.value)}
+                        />
+                      </label>
+                    </div>
+                    <div className="column">
+                      <label>
+                        <div>E-postadress</div>
+                        <input
+                          placeholder="example@gmail.com"
+                          type="email"
+                          name="email"
+                          required
+                          value={email}
+                          onChange={event => setEmail(event.target.value)}
+                        />
+                      </label>
+                    </div>
+                  </div>
+                  <div className="grid">
+                    <div className="column">
+                      <label>
+                        <div>Mobilnummer</div>
+                        <input
+                          placeholder="+46701234567"
+                          type="email"
+                          name="email"
+                          required
+                          value={phoneNumber}
+                          onChange={event => setPhoneNumber(event.target.value)}
+                        />
+                      </label>
+                    </div>
+                  </div>
+                  <div className="grid">
+                    <div className="column">
+                      <label>
+                        <input
+                          className="quantity"
+                          type="number"
+                          min="1"
+                          max="10"
+                          name="amount"
+                          value={amount}
+                          onChange={event => setAmount(event.target.value)}
+                        />
+                        St
+                      </label>
+                    </div>
+                  </div>
+
                   <input hidden name="productName" />
                   <p>
                     <button type="submit">Beställ</button>
