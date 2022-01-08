@@ -1,6 +1,7 @@
-import React from "react"
+import React, { useState } from "react"
 import "./product.less"
 import { siteData } from "../../../data/site/sitedata"
+
 import { Helmet } from "react-helmet"
 import Structure from "../../../components/structure/Structure"
 import Img from "../../../components/controls/img/Img"
@@ -27,7 +28,7 @@ export default function Product(props) {
 
   const totalPrice = product.price - savingPrice
 
-  const [state, setState] = React.useState({})
+  const [state, setState] = useState({})
 
   const handleChange = e => {
     setState({ ...state, [e.target.name]: e.target.value })
@@ -42,6 +43,10 @@ export default function Product(props) {
       body: encode({
         "form-name": form.getAttribute("name"),
         ...state,
+        "produkt-namn": product.name,
+        "produkt-id": product.id,
+        "produkt-pris": totalPrice,
+        "produkt-rea": savingPrice,
       }),
     })
       .then(() => navigate(form.getAttribute("action")))
@@ -135,43 +140,19 @@ export default function Product(props) {
                   </p>
                   <p>
                     <label>
-                      Din e-postadress:
+                      Din e-postadres:
                       <br />
                       <input
                         type="email"
-                        name="email"
+                        name="epost"
                         onChange={handleChange}
                       />
                     </label>
                   </p>
                   <p>
-                    <label>
-                      extra:
-                      <br />
-                      <input
-                        type="text"
-                        name="extra"
-                        value={product.name}
-                        onLoad={handleChange}
-                        onChange={handleChange}
-                      />
-                    </label>
-                  </p>
-                  <p hidden>
-                    <label>
-                      extra:
-                      <br />
-                      <input
-                        type="text"
-                        name="extraagain"
-                        value={product.name}
-                        onLoad={handleChange}
-                        onChange={handleChange}
-                      />
-                    </label>
-                  </p>
-                  <p>
-                    <button type="submit">Beställ</button>
+                    <button type="submit" onClick={handleChange}>
+                      Beställ
+                    </button>
                   </p>
                 </form>
               </div>
