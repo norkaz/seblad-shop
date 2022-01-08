@@ -32,7 +32,7 @@ export default function Product(props) {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
 
-  console.log(name, email, amount)
+  console.log({ name })
 
   const handleSubmit = e => {
     e.preventDefault()
@@ -42,9 +42,9 @@ export default function Product(props) {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": form.getAttribute("name"),
-        name: name,
-        amount: amount,
-        email: email,
+        name,
+        amount,
+        email,
         productName: product.name,
       }),
     })
@@ -134,14 +134,17 @@ export default function Product(props) {
                     </label>
                   </div>
                   <input
+                    name="name"
                     value={name}
                     onChange={event => setName(event.target.value)}
                   />
                   <input
+                    name="amount"
                     value={amount}
                     onChange={event => setAmount(event.target.value)}
                   />
                   <input
+                    name="email"
                     value={email}
                     onChange={event => setEmail(event.target.value)}
                   />
