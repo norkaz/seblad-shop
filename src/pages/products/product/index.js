@@ -1,5 +1,19 @@
 import React from "react"
+import Structure from "../../../components/structure/Structure"
+import { Link } from "gatsby"
 
 export default function index() {
-  return <div>Laddar produkt</div>
+  return (
+    <Structure>
+      <div class="section">
+        <div class="text-box">
+          <h1>Ingen produkt är vald.</h1>
+          <p>
+            Gå till <Link to="/products">produkter</Link> eller till{" "}
+            <Link to="/">startsidan</Link>.
+          </p>
+        </div>
+      </div>
+    </Structure>
+  )
 }
