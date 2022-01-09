@@ -38,7 +38,6 @@ export default function Product(props) {
           color={"#FFF"}
           shadow={false}
         />
-        <div className="test"></div>
         <div className="section product-info">
           <div className="grid">
             <div className="column">

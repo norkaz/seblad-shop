@@ -1,28 +1,54 @@
-@import '../../styles/variables.less';
+@import "../../styles/variables.less";
 
 #wrapper {
-    height: 100%;
-    .pro-sidebar {
-        position: fixed;
-    }
+  height: 100%;
+  .pro-sidebar {
+    position: fixed;
+  }
 }
 #main {
-    background: @backgroundColor;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    
-    .main-navigation {
-        @media screen and (max-width: @breakPointFirst) and (min-width: @breakPointSecond) {
-           
-        }
-        @media screen and (max-width: @breakPointSecond) and (min-width: @breakPointThird) {
-        
-        }
-        @media screen and (max-width: @breakPointThird) {
-            display: none;
-        }
+  background: @backgroundColor;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .main-navigation {
+    @media screen and (max-width: @breakPointFirst) and (min-width: @breakPointSecond) {
     }
+    @media screen and (max-width: @breakPointSecond) and (min-width: @breakPointThird) {
+    }
+    @media screen and (max-width: @breakPointThird) {
+      display: none;
+    }
+  }
+  #content {
+    max-width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin-bottom: auto;
+
+    section,
+    div.section {
+      max-width: 100%;
+      width: @contentWidth;
+      margin: 0 auto;
+      @media screen and (min-width: @breakPointFirst) {
+        margin: @defaultPadding auto;
+      }
+      @media screen and (max-width: @breakPointFirst) and (min-width: @breakPointSecond) {
+        width: @contentWidthBreakFirst;
+        margin: @defaultPadding auto;
+      }
+      @media screen and (max-width: @breakPointSecond) and (min-width: @breakPointThird) {
+        width: @contentWidthBreakSecond;
+        margin: @defaultPadding auto;
+      }
+      @media screen and (max-width: @breakPointThird) {
+        width: @contentWidthBreakThird;
+      }
+      &.full {
+        width: 100%;
+      }
+    }
+  }
 }
-
-

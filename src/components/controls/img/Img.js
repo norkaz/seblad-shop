@@ -5,60 +5,72 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSearchPlus } from "@fortawesome/free-solid-svg-icons"
 import { Link } from "gatsby"
 
-export default function Img({ headertag: Tag = "h2", ...props }) {
+export default function Img({
+  headertag: Tag = "h2",
+  header,
+  link,
+  src,
+  srcLarge,
+  color,
+  shadow,
+  alt,
+  height,
+  width,
+  popup,
+}) {
   return (
     <>
-      {props.header && props.link ? (
-        <Link to={props.link}>
+      {header && link ? (
+        <Link to={link}>
           <div
             className="resp-img"
-            style={{ backgroundImage: "url(" + props.src + ")" }}
+            style={{ backgroundImage: "url(" + src + ")" }}
           >
             <Tag
               className="splash-header"
               style={
-                props.shadow
-                  ? { textShadow: "0px 0px 18px #000", color: props.color }
-                  : { color: props.color }
+                shadow
+                  ? { textShadow: "0px 0px 18px #000", color: color }
+                  : { color: color }
               }
             >
-              {props.header}
+              {header}
             </Tag>
           </div>
         </Link>
-      ) : props.header ? (
+      ) : header ? (
         <div
           className="resp-img"
-          style={{ backgroundImage: "url(" + props.src + ")" }}
+          style={{ backgroundImage: "url(" + src + ")" }}
         >
           <Tag
             className="splash-header"
             style={
-              props.shadow
-                ? { textShadow: "0px 0px 18px #000", color: props.color }
-                : { color: props.color }
+              shadow
+                ? { textShadow: "0px 0px 18px #000", color: color }
+                : { color: color }
             }
           >
-            {props.header}
+            {header}
           </Tag>
         </div>
-      ) : props.popup ? (
+      ) : popup ? (
         <div className="resp-img popup">
           <ModalImage
             className="resp-img-popup"
-            small={props.src}
-            large={props.srcLarge ? props.srcLarge : props.src}
-            alt={props.alt}
+            small={src}
+            large={srcLarge ? srcLarge : src}
+            alt={alt}
           />
           <FontAwesomeIcon icon={faSearchPlus} color="#FFF" />
         </div>
       ) : (
         <div className="resp-img">
           <img
-            src={props.src}
-            height={props.height}
-            width={props.width}
-            alt={props.alt ? props.alt : "Bild"}
+            src={src}
+            height={height}
+            width={width}
+            alt={alt ? alt : "Bild"}
           />
         </div>
       )}

@@ -4,7 +4,6 @@ import { siteData } from "../../data/site/sitedata"
 import Header from "../header/Header"
 import Navigation from "../navigations/navigation/Navigation"
 import SideBar from "../sidebar/Side-Bar"
-import Content from "../content/Content"
 import SideBarOverlay from "../sidebar/Side-Bar-Overlay"
 import InstagramWidget from "../controls/instagramWidget/Instagram-Widget"
 import Footer from "../footer/Footer"
@@ -53,7 +52,7 @@ export default function Structure({ children, hideInstagram }) {
             className="main-navigation"
             menuName="mainMenu"
           />
-          <Content>
+          <div id="content">
             {children}
             {hideInstagram ? null : (
               <div className="section">
@@ -67,7 +66,7 @@ export default function Structure({ children, hideInstagram }) {
                 </div>
               </div>
             )}
-          </Content>
+          </div>
           <Footer />
         </div>
         <SideBar isOpen={isOpen} setIsOpen={setIsOpen} type="left">
