@@ -1,12 +1,12 @@
 export const menus = {
   mainMenu: [
     {
-      name: "Hem",
-      url: "/",
-    },
-    {
       name: "Instagram",
       url: "/instagram",
+    },
+    {
+      name: "Videos",
+      url: "/content/videos",
     },
     {
       name: "Produkter",
@@ -20,14 +20,14 @@ export const menus = {
   footerMenu: [],
   mobileMenuLeft: [
     {
-      name: "Produkter",
-      url: "/products",
+      name: "Instagram",
+      url: "/instagram",
     },
   ],
   mobileMenuRight: [
     {
-      name: "Instagram",
-      url: "/instagram",
+      name: "Videos",
+      url: "/content/videos",
     },
   ],
 }

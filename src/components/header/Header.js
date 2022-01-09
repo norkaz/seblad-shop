@@ -1,21 +1,22 @@
 import React from "react"
 import "./Header.less"
 import logo from "../../images/logo.png"
+import { Link } from "gatsby"
 import Navigation from "../navigations/navigation/Navigation"
 
 export default function Header() {
   return (
     <div id="header">
       <div className="header-box only-mobile">
-        <Navigation menuName={"mobileMenuLeft"} />
+        <Navigation className={"mobile-menu"} menuName={"mobileMenuLeft"} />
       </div>
       <div className="header-box">
-        <a className="logo-link" href="/">
+        <Link to="/" className="logo-link" activeClassName="active">
           <img className="logo" src={logo} alt="Seblad Keramik" />
-        </a>
+        </Link>
       </div>
       <div className="header-box only-mobile">
-        <Navigation menuName={"mobileMenuRight"} />
+        <Navigation className={"mobile-menu"} menuName={"mobileMenuRight"} />
       </div>
     </div>
   )
