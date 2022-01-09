@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Helmet } from "react-helmet"
 import { siteData } from "../../data/site/sitedata"
 import Header from "../header/Header"
@@ -12,6 +12,7 @@ import "../../styles/base.less"
 import "./Structure.less"
 
 export default function Structure({ children, hideInstagram }) {
+  const [isOpen, setIsOpen] = useState(false)
   return (
     <>
       <Helmet>
@@ -46,7 +47,7 @@ export default function Structure({ children, hideInstagram }) {
       </Helmet>
       <div id="wrapper">
         <div id="main">
-          <Header />
+          <Header isOpen={isOpen} setIsOpen={setIsOpen} />
           <Navigation
             classType="horizontal"
             className="main-navigation"
@@ -69,14 +70,14 @@ export default function Structure({ children, hideInstagram }) {
           </Content>
           <Footer />
         </div>
-        <SideBar type="left">
+        <SideBar isOpen={isOpen} setIsOpen={setIsOpen} type="left">
           <Navigation
             classType="vertical"
             className="sidebar-navigation"
             menuName="mainMenu"
           />
         </SideBar>
-        <SideBarOverlay />
+        <SideBarOverlay isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
     </>
   )
