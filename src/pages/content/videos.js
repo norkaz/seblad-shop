@@ -16,7 +16,7 @@ export default function Videos() {
           <div className="grid">
             <div className="column">
               <Video
-                hideInMobile={true}
+                hideInMobile={false}
                 height={"auto"}
                 controls
                 width="100%"
@@ -26,7 +26,7 @@ export default function Videos() {
             </div>
             <div className="column">
               <Video
-                hideInMobile={true}
+                hideInMobile={false}
                 controls
                 width="100%"
                 type="video/mp4"
