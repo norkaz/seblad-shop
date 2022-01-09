@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet"
 import { products } from "../../../data/products/products"
 import { siteData } from "../../../data/site/sitedata"
 import Structure from "../../../components/structure/Structure"
+import ImageBanner from "../../../components/controls/imageBanner/Image-Banner"
 import Img from "../../../components/controls/img/Img"
 import BuyForm from "../../../components/controls/buyForm/Buy-Form"
 import ShopWindow from "../../../components/controls/shopWindow/Shop-Window"
@@ -31,7 +32,7 @@ export default function Product(props) {
         <meta property="og:type" content="content-page" />
       </Helmet>
       <Structure>
-        <Img
+        <ImageBanner
           src={"https://facegram.se/CDN/13-2.jpg"}
           header={product.name}
           headertag={"h1"}

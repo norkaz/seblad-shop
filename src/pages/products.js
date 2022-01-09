@@ -2,7 +2,7 @@ import React from "react"
 import Structure from "../components/structure/Structure"
 import { Helmet } from "react-helmet"
 import { siteData } from "../data/site/sitedata"
-import Img from "../components/controls/img/Img"
+import ImageBanner from "../components/controls/imageBanner/Image-Banner"
 import ShopWindow from "../components/controls/shopWindow/Shop-Window"
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
         <meta property="og:type" content="content-page" />
       </Helmet>
       <Structure>
-        <Img
+        <ImageBanner
           src="https://facegram.se/CDN/13-2.jpg"
           header="Produkter"
           headertag="h1"

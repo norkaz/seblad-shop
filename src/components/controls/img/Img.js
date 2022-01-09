@@ -3,58 +3,11 @@ import "./Img.less"
 import ModalImage from "react-modal-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSearchPlus } from "@fortawesome/free-solid-svg-icons"
-import { Link } from "gatsby"
 
-export default function Img({
-  headertag: Tag = "h2",
-  header,
-  link,
-  src,
-  srcLarge,
-  color,
-  shadow,
-  alt,
-  height,
-  width,
-  popup,
-}) {
+export default function Img({ src, srcLarge, alt, height, width, popup }) {
   return (
     <>
-      {header && link ? (
-        <Link to={link}>
-          <div
-            className="resp-img"
-            style={{ backgroundImage: "url(" + src + ")" }}
-          >
-            <Tag
-              className="splash-header"
-              style={
-                shadow
-                  ? { textShadow: "0px 0px 18px #000", color: color }
-                  : { color: color }
-              }
-            >
-              {header}
-            </Tag>
-          </div>
-        </Link>
-      ) : header ? (
-        <div
-          className="resp-img"
-          style={{ backgroundImage: "url(" + src + ")" }}
-        >
-          <Tag
-            className="splash-header"
-            style={
-              shadow
-                ? { textShadow: "0px 0px 18px #000", color: color }
-                : { color: color }
-            }
-          >
-            {header}
-          </Tag>
-        </div>
-      ) : popup ? (
+      {popup ? (
         <div className="resp-img popup">
           <ModalImage
             className="resp-img-popup"
