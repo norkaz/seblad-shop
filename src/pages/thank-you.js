@@ -13,7 +13,17 @@ export default function Home() {
       </Helmet>
       <Structure>
         <div className="section">
-          <div className="grid">Tack för ditt meddelande</div>
+          <div className="grid">
+            <div className="column">
+              <div className="text-box">
+                <h1>Din beställning är nu genomförd</h1>
+                <p>
+                  Vi kommer kontakta dig angående leverans och lagersaldo samt
+                  övriga frågor.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </Structure>
     </>

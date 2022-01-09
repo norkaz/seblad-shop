@@ -5,8 +5,8 @@ import { Link } from "gatsby"
 export default function index() {
   return (
     <Structure>
-      <div class="section">
-        <div class="text-box">
+      <div className="section">
+        <div className="text-box">
           <h1>Ingen produkt är vald.</h1>
           <p>
             Gå till <Link to="/products">produkter</Link> eller till{" "}

@@ -2,6 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import { siteData } from "../data/site/sitedata"
 import Structure from "../components/structure/Structure"
+import { Link } from "gatsby"
 
 export default function NotFound() {
   return (
@@ -12,8 +13,17 @@ export default function NotFound() {
       </Helmet>
       <Structure>
         <div className="section">
-          <h1>Hoppsan!</h1>
-          <p>Sidan verkar ha försvunnit någonstans. Testa Googla</p>
+          <div className="grid">
+            <div className="column">
+              <div className="text-box">
+                <h1>Hoppsan! Sidan du försökte gå till hittades inte</h1>
+                <p>
+                  Gå till <Link to="/products">produkter</Link> eller till{" "}
+                  <Link to="/">startsidan</Link>.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </Structure>
     </>
