@@ -1,5 +1,5 @@
 import React from "react"
-import Product from "../../../components/product/product"
+import Product from "../../../components/product/Product"
 
 export default function product(props) {
   console.log(props.params.id)
