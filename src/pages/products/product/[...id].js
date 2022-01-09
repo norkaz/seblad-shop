@@ -32,12 +32,12 @@ export default function Product(props) {
       </Helmet>
       <Structure>
         <Img
-          src="https://facegram.se/CDN/13-2.jpg"
+          src={"https://facegram.se/CDN/13-2.jpg"}
           header={product.name}
-          headertag="h1"
-          color="#FFF"
+          headertag={"h1"}
+          color={"#FFF"}
           shadow={false}
-        ></Img>
+        />
         <div className="test"></div>
         <div className="section product-info">
           <div className="grid">

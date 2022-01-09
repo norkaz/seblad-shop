@@ -105,28 +105,32 @@ export default function BuyForm({
             className={"form-input"}
           />
         </div>
+        <div className="column empty"></div>
       </div>
-      <div className="grid">
+      <div className="grid buy-button-container">
         <div className="column">
           <Input hidden name="produkt" />
           <Input hidden name="artikelnummer" />
           <Input hidden name="summa" />
           <Input hidden name="rabatt" />
-          <Input
-            type="number"
-            min="1"
-            max="10"
-            name="amount"
-            value={amount}
-            onChange={event => setAmount(event.target.value)}
-            className="quantity"
-          />
-          St
+          <div className="buy-quantity">
+            <div className="quantity">
+              <input
+                type="number"
+                min="1"
+                max="10"
+                name="amount"
+                value={amount}
+                onChange={event => setAmount(event.target.value)}
+                className={"quantity-field form-input"}
+              />
+              St
+            </div>
+            <Input hidden name="totalsumma" />
+            <Button text={"Beställ"} className={"uppercase buy-button"} />
+          </div>
         </div>
       </div>
-      <input hidden name="totalsumma" />
-
-      <Button text={"Beställ"} className={"uppercase buy-button"} />
     </form>
   )
 }

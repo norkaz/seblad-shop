@@ -16,7 +16,7 @@ export default function Input({
 }) {
   return (
     <>
-      <label>
+      <span className={["input-container", hidden && "hidden"].join(" ")}>
         <span className="label">{label}</span>
         <input
           placeholder={placeholder}
@@ -30,7 +30,7 @@ export default function Input({
           hidden={hidden}
           className={["input", className].join(" ")}
         />
-      </label>
+      </span>
     </>
   )
 }
