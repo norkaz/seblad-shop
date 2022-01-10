@@ -99,6 +99,11 @@ export default function Product(props) {
             </div>
           </Widget>
         </Grid>
+        <Grid>
+          <Widget>
+            <ShopWindow />
+          </Widget>
+        </Grid>
       </Structure>
     </>
   )
