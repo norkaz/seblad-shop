@@ -34,13 +34,13 @@ export default function Product(props) {
         <meta property="og:type" content="content-page" />
       </Helmet>
       <Structure>
-        {/* <ImageBanner
+        <ImageBanner
           src={"https://facegram.se/CDN/13-2.jpg"}
           header={product.name}
           headertag={"h1"}
           color={"#FFF"}
           shadow={false}
-        /> */}
+        />
         <Grid className={"product-info"}>
           <Widget>
             <div className="product-image">
@@ -67,7 +67,6 @@ export default function Product(props) {
           </Widget>
           <Widget>
             <div className="text-box">
-              <h1>{product.name}</h1>
               <h2>{product.intro}</h2>
               <div className="price-container">
                 {product.discountPercent > 0 && (
@@ -99,9 +98,6 @@ export default function Product(props) {
               />
             </div>
           </Widget>
-        </Grid>
-        <Grid>
-          <ShopWindow />
         </Grid>
       </Structure>
     </>
