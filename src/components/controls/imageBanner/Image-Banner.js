@@ -26,7 +26,7 @@ export default function ImageBanner({
           {link ? (
             <Link to={link}>
               <Tag
-                className={["splash-header", shadow && "shadow"].join(" ")}
+                className={["splash-header", shadow ? "shadow" : ""].join(" ")}
                 style={{ color: color }}
               >
                 {header}
@@ -34,7 +34,7 @@ export default function ImageBanner({
             </Link>
           ) : (
             <Tag
-              className={["splash-header", shadow && "shadow"].join(" ")}
+              className={["splash-header", shadow ? "shadow" : ""].join(" ")}
               style={{ color: color }}
             >
               {header}
