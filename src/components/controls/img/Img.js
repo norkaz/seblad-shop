@@ -1,8 +1,8 @@
 import React from "react"
-import "./Img.less"
 import ModalImage from "react-modal-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSearchPlus } from "@fortawesome/free-solid-svg-icons"
+import "./Imgnew.less"
 
 export default function Img({ src, srcLarge, alt, height, width, popup }) {
   return (

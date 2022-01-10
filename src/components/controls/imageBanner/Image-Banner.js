@@ -1,6 +1,6 @@
 import React from "react"
-import "./Image-Banner.less"
 import { Link } from "gatsby"
+import "./Image-Banner.less"
 
 export default function ImageBanner({
   headertag: Tag = "h2",

@@ -1,9 +1,9 @@
 import React from "react"
-import "./Shop-Window.less"
 import { products } from "../../../data/products/products"
 import Img from "../img/Img"
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
+import "./Shop-Window.less"
 
 const imgRoute = "https://facegram.se/CDNproducts/articlenumbers/"
 const responsive = {

@@ -1,8 +1,8 @@
 import React, { useState } from "react"
-import "./Buy-Form.less"
 import Button from "../../../assets/buttons/Button"
 import Input from "../../../assets/inputs/Input"
 import { navigate } from "gatsby-link"
+import "./Buy-Form.less"
 
 export default function BuyForm({
   totalPrice,
@@ -66,8 +66,8 @@ export default function BuyForm({
           hidden
         />
       </div>
-      <div className="grid">
-        <div className="column">
+      <div className="form-row">
+        <div className="form-column">
           <Input
             label={"För- och efternamn"}
             placeholder="Andreas Svensson"
@@ -79,7 +79,7 @@ export default function BuyForm({
             className={"form-input"}
           />
         </div>
-        <div className="column">
+        <div className="form-column">
           <Input
             label={"E-postadress"}
             placeholder="example@gmail.com"
@@ -92,8 +92,8 @@ export default function BuyForm({
           />
         </div>
       </div>
-      <div className="grid">
-        <div className="column">
+      <div className="form-row">
+        <div className="form-column">
           <Input
             label={"Mobilnummer"}
             placeholder="+46701234567"
@@ -105,10 +105,10 @@ export default function BuyForm({
             className={"form-input"}
           />
         </div>
-        <div className="column empty"></div>
+        <div className="form-column empty"></div>
       </div>
-      <div className="grid buy-button-container">
-        <div className="column">
+      <div className="form-row buy-button-container">
+        <div className="form-column">
           <Input hidden name="produkt" />
           <Input hidden name="artikelnummer" />
           <Input hidden name="summa" />

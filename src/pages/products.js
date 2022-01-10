@@ -1,7 +1,10 @@
 import React from "react"
-import Structure from "../components/structure/Structure"
+
 import { Helmet } from "react-helmet"
 import { siteData } from "../data/site/sitedata"
+import Structure from "../components/structure/Structure"
+import Grid from "../components/gridLayout/grid/Grid"
+import Widget from "../components/gridLayout/widget/Widget"
 import ImageBanner from "../components/controls/imageBanner/Image-Banner"
 import ShopWindow from "../components/controls/shopWindow/Shop-Window"
 
@@ -20,9 +23,11 @@ export default function Home() {
           color="#FFF"
           shadow={false}
         />
-        <div className="section">
-          <ShopWindow />
-        </div>
+        <Grid>
+          <Widget>
+            <ShopWindow />
+          </Widget>
+        </Grid>
       </Structure>
     </>
   )

@@ -1,9 +1,9 @@
 import React from "react"
-import "./Header.less"
 import logo from "../../images/logo.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMugHot } from "@fortawesome/free-solid-svg-icons"
 import { Link } from "gatsby"
+import "./Header.less"
 
 export default function Header({ setIsOpen }) {
   return (

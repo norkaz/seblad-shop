@@ -3,6 +3,8 @@ import { Helmet } from "react-helmet"
 import { products } from "../../../data/products/products"
 import { siteData } from "../../../data/site/sitedata"
 import Structure from "../../../components/structure/Structure"
+import Grid from "../../../components/gridLayout/grid/Grid"
+import Widget from "../../../components/gridLayout/widget/Widget"
 import ImageBanner from "../../../components/controls/imageBanner/Image-Banner"
 import Img from "../../../components/controls/img/Img"
 import BuyForm from "../../../components/controls/buyForm/Buy-Form"
@@ -39,69 +41,67 @@ export default function Product(props) {
           color={"#FFF"}
           shadow={false}
         />
-        <div className="section product-info">
-          <div className="grid">
-            <div className="column">
-              <div className="product-image">
-                {savingPrice ? (
-                  <span className="badge">{product.discountPercent + "%"}</span>
-                ) : null}
-                <Img
-                  popup={true}
-                  srcLarge={[
-                    "https://facegram.se/CDNproducts/articlenumbers/",
-                    product.artNr,
-                    "_XL.jpg",
-                  ].join("")}
-                  src={[
-                    "https://facegram.se/CDNproducts/articlenumbers/",
-                    product.artNr,
-                    "_L.jpg",
-                  ].join("")}
-                  alt={product.name}
-                  width="400px"
-                  height="400px"
-                />
-              </div>
+        <Grid className={"product-info"}>
+          <Widget>
+            <div className="product-image">
+              {savingPrice ? (
+                <span className="badge">{product.discountPercent + "%"}</span>
+              ) : null}
+              <Img
+                popup={true}
+                srcLarge={[
+                  "https://facegram.se/CDNproducts/articlenumbers/",
+                  product.artNr,
+                  "_XL.jpg",
+                ].join("")}
+                src={[
+                  "https://facegram.se/CDNproducts/articlenumbers/",
+                  product.artNr,
+                  "_L.jpg",
+                ].join("")}
+                alt={product.name}
+                width="400px"
+                height="400px"
+              />
             </div>
-            <div className="column">
-              <div className="text-box">
-                <h2>{product.intro}</h2>
-                <div className="price-container">
-                  {product.discountPercent > 0 && (
-                    <>
-                      <div className="price discount">
-                        {orderSum} {product.currency}
-                      </div>
-                      <div className="regular-price">
-                        {product.price * amount} {product.currency}
-                      </div>
-                    </>
-                  )}
-                  {product.discountPercent <= 0 && (
-                    <>
-                      <div className="price">
-                        {orderSum} {product.currency}
-                      </div>
-                    </>
-                  )}
-                </div>
-                <p>{product.description}</p>
-                <BuyForm
-                  totalPrice={totalPrice}
-                  product={product}
-                  savingPrice={savingPrice}
-                  orderSum={orderSum}
-                  amount={amount}
-                  setAmount={setAmount}
-                />
+          </Widget>
+          <Widget>
+            <div className="text-box">
+              <h2>{product.intro}</h2>
+              <div className="price-container">
+                {product.discountPercent > 0 && (
+                  <>
+                    <div className="price discount">
+                      {orderSum} {product.currency}
+                    </div>
+                    <div className="regular-price">
+                      {product.price * amount} {product.currency}
+                    </div>
+                  </>
+                )}
+                {product.discountPercent <= 0 && (
+                  <>
+                    <div className="price">
+                      {orderSum} {product.currency}
+                    </div>
+                  </>
+                )}
               </div>
+              <p>{product.description}</p>
+              <BuyForm
+                totalPrice={totalPrice}
+                product={product}
+                savingPrice={savingPrice}
+                orderSum={orderSum}
+                amount={amount}
+                setAmount={setAmount}
+              />
             </div>
-          </div>
-        </div>
-        <div className="section">
+          </Widget>
+        </Grid>
+        <Grid>
           <ShopWindow />
-        </div>
+        </Grid>
       </Structure>
     </>
   )

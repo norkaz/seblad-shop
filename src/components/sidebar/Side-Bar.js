@@ -1,7 +1,7 @@
 import React from "react"
-import "./Side-Bar.less"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTimes } from "@fortawesome/free-solid-svg-icons"
+import "./Side-Bar.less"
 
 export default function SideBar({ children, type, isOpen, setIsOpen }) {
   return (
