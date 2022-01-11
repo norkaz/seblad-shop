@@ -110,34 +110,6 @@ input {
   }
 }
 
-div.grid {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -@defaultPadding / 2;
-  div.widget {
-    padding: @defaultPadding / 2;
-    width: 100%;
-    @media screen and (min-width: @breakPointFirst) {
-      flex: 1 1;
-      padding: 0 @defaultPadding / 2;
-    }
-
-    @media screen and (max-width: @breakPointFirst) and (min-width: @breakPointSecond) {
-      flex: 1 1;
-      padding: 0 @defaultPadding / 2;
-    }
-    @media screen and (max-width: @breakPointSecond) and (min-width: @breakPointThird) {
-      flex: 1 1;
-      padding: 0 @defaultPadding / 2;
-    }
-    @media screen and (max-width: @breakPointThird) {
-    }
-    &.empty {
-      padding: 0 @defaultPadding / 2;
-    }
-  }
-}
-
 @media screen and (min-width: @breakPointFirst) {
   h1 {
     font-size: 2rem;
