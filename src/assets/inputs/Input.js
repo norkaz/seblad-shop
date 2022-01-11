@@ -1,5 +1,5 @@
 import React from "react"
-import "./Input.less"
+import * as style from "./input.module.less"
 
 export default function Input({
   placeholder,
@@ -16,8 +16,10 @@ export default function Input({
 }) {
   return (
     <>
-      <span className={["input-container", hidden && "hidden"].join(" ")}>
-        <span className="label">{label}</span>
+      <span
+        className={[style.inputContainer, hidden && style.hidden].join(" ")}
+      >
+        <span className={style.label}>{label}</span>
         <input
           placeholder={placeholder}
           type={type}
@@ -28,7 +30,7 @@ export default function Input({
           max={max}
           onChange={onChange}
           hidden={hidden}
-          className={["input", className].join(" ")}
+          className={[style.input, className].join(" ")}
         />
       </span>
     </>

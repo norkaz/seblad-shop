@@ -1,5 +1,5 @@
 import React from "react"
-import "./Video.less"
+import * as style from "./video.module.less"
 
 export default function Video({
   src,
@@ -16,7 +16,10 @@ export default function Video({
 }) {
   return (
     <div
-      className={["videoContainer", hideInMobile && "hide-mobile"].join(" ")}
+      className={[
+        style.videoContainer,
+        hideInMobile ? style.hideInMobile : null,
+      ].join(" ")}
       style={{ height: height, width: width }}
     >
       <video

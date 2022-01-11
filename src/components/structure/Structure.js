@@ -10,7 +10,7 @@ import Widget from "../gridLayout/widget/Widget"
 import InstagramWidget from "../controls/instagramWidget/Instagram-Widget"
 import Footer from "../footer/Footer"
 import "../../styles/base.less"
-import "./Structure.less"
+import * as style from "./structure.module.less"
 
 export default function Structure({ children, hideInstagram }) {
   const [isOpen, setIsOpen] = useState(false)
@@ -46,15 +46,15 @@ export default function Structure({ children, hideInstagram }) {
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="theme-color" content="#ffffff" />
       </Helmet>
-      <div id="wrapper">
-        <div id="main">
+      <div id={style.wrapper}>
+        <div id={style.main}>
           <Header isOpen={isOpen} setIsOpen={setIsOpen} />
           <Navigation
-            classType="horizontal"
-            className="main-navigation"
+            horizontal={true}
+            className={style.mainNavigation}
             menuName="mainMenu"
           />
-          <div id="content">
+          <div id={style.content}>
             {children}
             {hideInstagram ? null : (
               <Grid>
@@ -70,11 +70,7 @@ export default function Structure({ children, hideInstagram }) {
           <Footer />
         </div>
         <SideBar isOpen={isOpen} setIsOpen={setIsOpen} type="left">
-          <Navigation
-            classType="vertical"
-            className="sidebar-navigation"
-            menuName="mainMenu"
-          />
+          <Navigation menuName="mainMenu" />
         </SideBar>
         <SideBarOverlay isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>

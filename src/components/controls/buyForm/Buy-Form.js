@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import Button from "../../../assets/buttons/Button"
 import Input from "../../../assets/inputs/Input"
 import { navigate } from "gatsby-link"
-import "./Buy-Form.less"
+import * as style from "./buy-form.module.less"
 
 export default function BuyForm({
   totalPrice,
@@ -47,7 +47,7 @@ export default function BuyForm({
   }
   return (
     <form
-      className="product-form"
+      className={style.productForm}
       name="contact"
       method="post"
       action="/thank-you/"
@@ -66,8 +66,8 @@ export default function BuyForm({
           hidden
         />
       </div>
-      <div className="form-row">
-        <div className="form-column">
+      <div className={style.formRow}>
+        <div className={style.formColumn}>
           <Input
             label={"För- och efternamn"}
             placeholder="Andreas Svensson"
@@ -76,10 +76,10 @@ export default function BuyForm({
             name="name"
             value={name}
             onChange={event => setName(event.target.value)}
-            className={"form-input"}
+            className={style.formInput}
           />
         </div>
-        <div className="form-column">
+        <div className={style.formColumn}>
           <Input
             label={"E-postadress"}
             placeholder="example@gmail.com"
@@ -88,12 +88,12 @@ export default function BuyForm({
             name="email"
             value={email}
             onChange={event => setEmail(event.target.value)}
-            className={"form-input"}
+            className={style.formInput}
           />
         </div>
       </div>
-      <div className="form-row">
-        <div className="form-column">
+      <div className={style.formRow}>
+        <div className={style.formColumn}>
           <Input
             label={"Mobilnummer"}
             placeholder="+46701234567"
@@ -102,19 +102,21 @@ export default function BuyForm({
             name="phoneNumber"
             value={phoneNumber}
             onChange={event => setPhoneNumber(event.target.value)}
-            className={"form-input"}
+            className={style.formInput}
           />
         </div>
-        <div className="form-column empty"></div>
+        <div className={[style.formColumn, style.empty].join(" ")}></div>
       </div>
-      <div className="form-row buy-button-container">
-        <div className="form-column">
+      <div
+        className={[style.formRow, style.formRowBuyButtonContainer].join(" ")}
+      >
+        <div className={style.formColumn}>
           <Input hidden name="produkt" />
           <Input hidden name="artikelnummer" />
           <Input hidden name="summa" />
           <Input hidden name="rabatt" />
-          <div className="buy-quantity">
-            <div className="quantity">
+          <div className={style.buyQuantity}>
+            <div className={style.quantity}>
               <input
                 type="number"
                 min="1"
@@ -122,12 +124,17 @@ export default function BuyForm({
                 name="amount"
                 value={amount}
                 onChange={event => setAmount(event.target.value)}
-                className={"quantity-field form-input"}
+                className={[style.quantityField, style.formInput].join(" ")}
               />
               St
             </div>
             <Input hidden name="totalsumma" />
-            <Button text={"Beställ"} className={"uppercase buy-button"} />
+            <Button
+              text={"Beställ"}
+              uppercase={true}
+              type={"submit"}
+              className={style.buyButton}
+            />
           </div>
         </div>
       </div>

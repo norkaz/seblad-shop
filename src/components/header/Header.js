@@ -1,25 +1,32 @@
 import React from "react"
 import logo from "../../images/logo.png"
+import { siteData } from "../../data/site/sitedata"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMugHot } from "@fortawesome/free-solid-svg-icons"
 import { Link } from "gatsby"
-import "./Header.less"
+import * as style from "./header.module.less"
 
 export default function Header({ setIsOpen }) {
   return (
-    <div id="header">
-      <div className="header-box only-mobile hamburger">
-        <button onClick={() => setIsOpen(true)}>
+    <div className={style.header}>
+      <div
+        className={[style.headerBox, "only-mobile", style.hamburger].join(" ")}
+      >
+        <button className={style.headerButton} onClick={() => setIsOpen(true)}>
           <FontAwesomeIcon icon={faMugHot} />
         </button>
       </div>
 
-      <div className="header-box">
-        <Link to="/" className="logo-link" activeClassName="active">
-          <img className="logo" src={logo} alt="Seblad Keramik" />
+      <div className={style.headerBox}>
+        <Link
+          to="/"
+          className={style.logoLink}
+          activeClassName={style.logoLinkActive}
+        >
+          <img className={style.logo} src={logo} alt={siteData.name} />
         </Link>
       </div>
-      <div className="header-box only-mobile"></div>
+      <div className={[style.headerBox, "only-mobile"].join(" ")}></div>
     </div>
   )
 }

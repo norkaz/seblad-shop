@@ -15,7 +15,7 @@ export default function Home() {
         <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
       </Helmet>
       <Structure>
-        <Grid className={"full"}>
+        <Grid isFull={true}>
           <Widget>
             <Img src="https://facegram.se/CDN/9-2.jpg" />
           </Widget>

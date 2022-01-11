@@ -3,7 +3,7 @@ import { products } from "../../../data/products/products"
 import Img from "../img/Img"
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
-import "./Shop-Window.less"
+import * as style from "./shop-window.module.less"
 
 const imgRoute = "https://facegram.se/CDNproducts/articlenumbers/"
 const responsive = {
@@ -44,12 +44,12 @@ export default function ProductList(props) {
 
           const productImgUrl = [imgRoute, product.artNr, ".jpg"].join("")
           return (
-            <div key={key} className="item">
+            <div key={key} className={style.item}>
               <a href={productUrl}>
-                <div className="border-wrapper">
-                  <div className="image">
+                <div className={style.borderWrapper}>
+                  <div className={style.image}>
                     {savingPrice ? (
-                      <span className="badge">
+                      <span className={style.badge}>
                         {product.discountPercent + "%"}
                       </span>
                     ) : null}
@@ -60,21 +60,23 @@ export default function ProductList(props) {
                       height="400px"
                     />
                   </div>
-                  <div className="item-info">
-                    <div className="name">{product.name}</div>
-                    <div className="intro">{product.intro}</div>
-                    <div className="price-container">
+                  <div className={style.itemInfo}>
+                    <div className={style.name}>{product.name}</div>
+                    <div className={style.intro}>{product.intro}</div>
+                    <div className={style.priceContainer}>
                       {savingPrice ? (
                         <>
-                          <div className="price discount">
+                          <div
+                            className={[style.price, style.discount].join(" ")}
+                          >
                             {product.price - savingPrice} {product.currency}
                           </div>
-                          <div className="regular-price">
+                          <div className={style.regularPrice}>
                             {product.price} {product.currency}
                           </div>
                         </>
                       ) : (
-                        <div className="price">
+                        <div className={style.price}>
                           {product.price} {product.currency}
                         </div>
                       )}

@@ -1,9 +1,16 @@
 import React from "react"
-import "./Button.less"
+import * as style from "./button.module.less"
 
-export default function Button({ text, className }) {
+export default function Button({ text, className, type, uppercase }) {
   return (
-    <button className={[className, "button"].join(" ")} type="submit">
+    <button
+      className={[
+        className,
+        style.button,
+        uppercase && style.buttonUppercase,
+      ].join(" ")}
+      type={type}
+    >
       {text}
     </button>
   )

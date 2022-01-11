@@ -1,6 +1,6 @@
 @import "../../styles/variables.less";
 
-.sidebar {
+.side-bar {
   position: absolute;
   background: @navbarBackgroundColor;
   z-index: 103;
@@ -14,7 +14,10 @@
     &.open {
       transform: translateY(0);
     }
-    .sidebar-header {
+    &.closed {
+      transform: translateY(-100%);
+    }
+    .side-bar-header {
       @media screen and (max-width: @breakPointThird) {
         padding: 2vw;
       }
@@ -43,7 +46,7 @@
     }
     &.open {
       transform: translateX(0);
-      .sidebar-header {
+      .side-bar-header {
         .close-btn {
           border: 0;
           padding: 0;
@@ -61,13 +64,16 @@
         }
       }
     }
+    &.closed {
+      transform: translateX(-100%);
+    }
   }
 
-  .sidebar-container {
+  .side-bar-container {
     height: 100%;
     width: 100%;
     overflow-y: auto;
-    .sidebar-header {
+    .side-bar-header {
       .close-btn {
         -webkit-appearance: none;
         -moz-appearance: none;
@@ -80,20 +86,8 @@
       }
     }
 
-    .sidebar-content {
+    .side-bar-content {
       padding: 0 @defaultPadding;
-
-      .menu {
-        .menu-item {
-          .menu-item-link {
-            font-weight: @fontWeightMedium;
-            &.active {
-              color: lighten(@linkColor, 20%);
-              text-decoration: underline;
-            }
-          }
-        }
-      }
     }
   }
 }

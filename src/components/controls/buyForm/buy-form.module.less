@@ -1,17 +1,10 @@
 @import "../../../styles/variables.less";
 .product-form {
   padding-bottom: @defaultPadding;
-  .input-container {
-    .label {
-      font-weight: @fontWeightMedium;
-      display: block;
-      margin: 0.5rem 0;
-    }
-    .form-input {
-      width: 100%;
-      margin-bottom: 0.5rem;
-      @media screen and (min-width: @breakPointThird) {
-      }
+  .form-input {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    @media screen and (min-width: @breakPointThird) {
     }
   }
   .form-row {
@@ -24,8 +17,14 @@
       @media screen and (max-width: @breakPointThird) {
         flex: auto;
       }
+      &.empty {
+        @media screen and (max-width: @breakPointThird) {
+          flex: 0;
+          padding: 0;
+        }
+      }
     }
-    &.buy-button-container {
+    &-buy-button-container {
       flex-wrap: nowrap;
 
       .form-column {
@@ -59,6 +58,13 @@
           .buy-button {
             width: 100%;
             height: 100%;
+            background: @linkColor;
+            border: 1px solid @linkColor;
+            color: @secondaryColor;
+            &:hover {
+              background: lighten(@linkColor, 8%);
+              border-color: lighten(@linkColor, 8%);
+            }
           }
         }
       }

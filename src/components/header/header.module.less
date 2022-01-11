@@ -1,6 +1,6 @@
 @import "../../styles/variables.less";
 
-#header {
+.header {
   text-align: center;
   padding: @defaultPadding;
   background: var(--headerBackgroundColor);
@@ -30,7 +30,7 @@
     }
     &.hamburger {
       justify-content: flex-start;
-      button {
+      .header-button {
         color: @textColor;
         font-size: 1.25rem;
         border: 0;
@@ -47,7 +47,7 @@
     align-items: center;
     justify-content: center;
 
-    &.active {
+    &-active {
       position: relative;
       &:before {
         content: "";

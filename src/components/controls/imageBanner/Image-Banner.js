@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import "./Image-Banner.less"
+import * as style from "./image-banner.module.less"
 
 export default function ImageBanner({
   headertag: Tag = "h2",
@@ -16,7 +16,7 @@ export default function ImageBanner({
     <>
       {header && (
         <div
-          className="image-banner"
+          className={style.imageBanner}
           style={{
             backgroundImage: "url(" + src + ")",
             height: height,
@@ -26,7 +26,10 @@ export default function ImageBanner({
           {link ? (
             <Link to={link}>
               <Tag
-                className={["splash-header", shadow ? "shadow" : ""].join(" ")}
+                className={[
+                  style.splashHeader,
+                  shadow ? style.shadow : "",
+                ].join(" ")}
                 style={{ color: color }}
               >
                 {header}
@@ -34,7 +37,9 @@ export default function ImageBanner({
             </Link>
           ) : (
             <Tag
-              className={["splash-header", shadow ? "shadow" : ""].join(" ")}
+              className={[style.splashHeader, shadow ? style.shadow : ""].join(
+                " "
+              )}
               style={{ color: color }}
             >
               {header}
