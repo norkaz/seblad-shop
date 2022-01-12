@@ -5,14 +5,12 @@ import Header from "../header/Header"
 import Navigation from "../navigations/navigation/Navigation"
 import SideBar from "../sidebar/Side-Bar"
 import SideBarOverlay from "../sidebar/Side-Bar-Overlay"
-import Grid from "../gridLayout/grid/Grid"
-import Widget from "../gridLayout/widget/Widget"
 import InstagramWidget from "../controls/instagramWidget/Instagram-Widget"
 import Footer from "../footer/Footer"
 import "../../styles/base.less"
 import * as style from "./structure.module.less"
 
-export default function Structure({ children, hideInstagram }) {
+export default function Structure({ children }) {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <>
@@ -56,16 +54,12 @@ export default function Structure({ children, hideInstagram }) {
           />
           <div id={style.content}>
             {children}
-            {hideInstagram ? null : (
-              <Grid>
-                <Widget>
-                  <InstagramWidget
-                    lightWidgetId={"b030bd5dd1da52e9b2ae3d4e060d4178"}
-                    title={"Senaste från Instagram @sebladkeramik"}
-                  />
-                </Widget>
-              </Grid>
-            )}
+            {/* {hideInstagram ? null : (
+              <InstagramWidget
+                lightWidgetId={"b030bd5dd1da52e9b2ae3d4e060d4178"}
+                title={"Senaste från Instagram @sebladkeramik"}
+              />
+            )} */}
           </div>
           <Footer />
         </div>

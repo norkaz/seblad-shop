@@ -3,12 +3,11 @@ import { Helmet } from "react-helmet"
 import { products } from "../../../data/products/products"
 import { siteData } from "../../../data/site/sitedata"
 import Structure from "../../../components/structure/Structure"
-import Grid from "../../../components/gridLayout/grid/Grid"
-import Widget from "../../../components/gridLayout/widget/Widget"
-import ImageBanner from "../../../components/controls/imageBanner/Image-Banner"
+// import Grid from "../../../components/gridLayout/grid/Grid"
+// import Widget from "../../../components/gridLayout/widget/Widget"
 import Img from "../../../components/controls/img/Img"
 import BuyForm from "../../../components/controls/buyForm/Buy-Form"
-import ShopWindow from "../../../components/controls/shopWindow/Shop-Window"
+// import ShopWindow from "../../../components/controls/shopWindow/Shop-Window"
 import * as style from "./product.module.less"
 
 export default function Product(props) {
@@ -33,14 +32,7 @@ export default function Product(props) {
         </title>
         <meta property="og:type" content="content-page" />
       </Helmet>
-      <Structure>
-        <ImageBanner
-          src={"https://facegram.se/CDN/13-2.jpg"}
-          header={product.name}
-          headertag={"h1"}
-          color={"#FFF"}
-          shadow={false}
-        />
+      <Structure hideInstagram={true}>
         <div className={style.product}>
           <div className={style.productImage}>
             {savingPrice ? (
@@ -66,6 +58,7 @@ export default function Product(props) {
             />
           </div>
           <div className={style.productInfo}>
+            <h1>{product.name}</h1>
             <h2>{product.intro}</h2>
             <div className={style.priceContainer}>
               {product.discountPercent > 0 && (
@@ -97,11 +90,11 @@ export default function Product(props) {
             />
           </div>
         </div>
-        <Grid>
+        {/* <Grid>
           <Widget>
             <ShopWindow />
           </Widget>
-        </Grid>
+        </Grid> */}
       </Structure>
     </>
   )
