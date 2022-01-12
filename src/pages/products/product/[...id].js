@@ -3,11 +3,11 @@ import { Helmet } from "react-helmet"
 import { products } from "../../../data/products/products"
 import { siteData } from "../../../data/site/sitedata"
 import Structure from "../../../components/structure/Structure"
-// import Grid from "../../../components/gridLayout/grid/Grid"
-// import Widget from "../../../components/gridLayout/widget/Widget"
+import Grid from "../../../components/gridLayout/grid/Grid"
+import Widget from "../../../components/gridLayout/widget/Widget"
 import Img from "../../../components/controls/img/Img"
 import BuyForm from "../../../components/controls/buyForm/Buy-Form"
-// import ShopWindow from "../../../components/controls/shopWindow/Shop-Window"
+import ShopWindow from "../../../components/controls/shopWindow/Shop-Window"
 import * as style from "./product.module.less"
 
 export default function Product(props) {
@@ -32,7 +32,7 @@ export default function Product(props) {
         </title>
         <meta property="og:type" content="content-page" />
       </Helmet>
-      <Structure hideInstagram={true}>
+      <Structure hideInstagram={false}>
         <div className={style.product}>
           <div className={style.productImage}>
             {savingPrice ? (
@@ -90,11 +90,11 @@ export default function Product(props) {
             />
           </div>
         </div>
-        {/* <Grid>
+        <Grid>
           <Widget>
             <ShopWindow />
           </Widget>
-        </Grid> */}
+        </Grid>
       </Structure>
     </>
   )
