@@ -78,22 +78,23 @@ export default function Product(props) {
                 {product.discountPercent > 0 && (
                   <>
                     <div className={[style.price, style.discount].join(" ")}>
-                      {orderSum} {product.currency}
+                      {totalPrice} {product.currency}
                     </div>
                     <div className={style.regularPrice}>
-                      {product.price * amount} {product.currency}
+                      {product.price} {product.currency}
                     </div>
                   </>
                 )}
                 {product.discountPercent <= 0 && (
                   <>
                     <div className={style.price}>
-                      {orderSum} {product.currency}
+                      {totalPrice} {product.currency}
                     </div>
                   </>
                 )}
               </div>
               <p>{product.description}</p>
+
               <BuyForm
                 totalPrice={totalPrice}
                 product={product}
@@ -102,6 +103,27 @@ export default function Product(props) {
                 amount={amount}
                 setAmount={setAmount}
               />
+              {amount > 1 ? (
+                <div className={style.priceContainer}>
+                  {product.discountPercent <= 0 && (
+                    <div className={style.price}>
+                      Att betala: {orderSum} {product.currency}
+                    </div>
+                  )}
+
+                  {product.discountPercent > 0 && (
+                    <>
+                      <div className={[style.price, style.discount].join(" ")}>
+                        Att betala: {orderSum} {product.currency}
+                      </div>
+                      <span>Du sparar: </span>
+                      <span className={style.regularPrice}>
+                        {product.price * amount} {product.currency}
+                      </span>
+                    </>
+                  )}
+                </div>
+              ) : null}
             </div>
           </div>
           <Grid>

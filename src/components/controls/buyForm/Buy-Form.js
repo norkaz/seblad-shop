@@ -45,6 +45,7 @@ export default function BuyForm({
       .then(() => navigate(form.getAttribute("action")))
       .catch(error => alert(error))
   }
+  console.log(amount)
   return (
     <form
       className={style.productForm}
@@ -128,7 +129,19 @@ export default function BuyForm({
               />
               St
             </div>
-            <Input hidden name="totalsumma" />
+            <Button
+              text={"-"}
+              type={"button"}
+              className={style.quantityButton}
+              onClick={() => setAmount(--amount)}
+            ></Button>
+            <Button
+              text={"+"}
+              type={"button"}
+              className={style.quantityButton}
+              onClick={() => setAmount(++amount)}
+            ></Button>
+            <Input hidden name={"totalsumma"} />
             <Button
               text={"Beställ"}
               uppercase={true}
