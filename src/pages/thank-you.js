@@ -16,7 +16,7 @@ export default function Home() {
       <Structure>
         <Grid>
           <Widget>
-            <div className="text-boxxx">
+            <div className="text-box">
               <h1>Din beställning är nu genomförd</h1>
               <p>
                 Vi kommer kontakta dig angående leverans och lagersaldo samt
