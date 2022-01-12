@@ -6,6 +6,10 @@
   max-width: 100%;
   margin: 0 auto;
   @media screen and (min-width: @breakPointFirst) {
+    .product-image,
+    .product-info {
+      flex: 1 1;
+    }
     width: @contentWidth;
   }
   @media screen and (max-width: @breakPointFirst) and (min-width: @breakPointSecond) {

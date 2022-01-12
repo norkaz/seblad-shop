@@ -5,6 +5,8 @@ import { faSearchPlus } from "@fortawesome/free-solid-svg-icons"
 import * as style from "./image.module.less"
 
 export default function Img({ src, srcLarge, alt, height, width, popup }) {
+  console.log(src)
+  console.log(srcLarge)
   return (
     <>
       {popup ? (
