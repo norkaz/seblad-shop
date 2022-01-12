@@ -4,6 +4,8 @@ import { products } from "../../../data/products/products"
 import { siteData } from "../../../data/site/sitedata"
 import Structure from "../../../components/structure/Structure"
 import Img from "../../../components/controls/img/Img"
+import Grid from "../../../components/gridLayout/grid/Grid"
+import Widget from "../../../components/gridLayout/widget/Widget"
 import BuyForm from "../../../components/controls/buyForm/Buy-Form"
 import ShopWindow from "../../../components/controls/shopWindow/Shop-Window"
 import * as style from "./product.module.less"
@@ -90,7 +92,11 @@ export default function Product(props) {
               />
             </div>
           </div>
-          <ShopWindow />
+          <Grid>
+            <Widget>
+              <ShopWindow />
+            </Widget>
+          </Grid>
         </Structure>
       </>
     )
