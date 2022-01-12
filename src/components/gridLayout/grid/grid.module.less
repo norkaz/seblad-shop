@@ -1,0 +1,28 @@
+@import "../../../styles/variables.less";
+.section {
+  max-width: 100%;
+  width: @contentWidth;
+  margin: 0 auto;
+  @media screen and (min-width: @breakPointFirst) {
+    margin: @defaultPadding auto;
+  }
+  @media screen and (max-width: @breakPointFirst) and (min-width: @breakPointSecond) {
+    width: @contentWidthBreakFirst;
+    margin: @defaultPadding auto;
+  }
+  @media screen and (max-width: @breakPointSecond) and (min-width: @breakPointThird) {
+    width: @contentWidthBreakSecond;
+    margin: @defaultPadding auto;
+  }
+  @media screen and (max-width: @breakPointThird) {
+    width: @contentWidthBreakThird;
+  }
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -@defaultPadding / 2;
+  }
+  &.is-full {
+    width: 100%;
+  }
+}

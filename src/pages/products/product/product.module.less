@@ -1,0 +1,61 @@
+@import "../../../styles/variables.less";
+.product {
+  padding: @defaultPadding 0;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin: 0 auto;
+  @media screen and (min-width: @breakPointFirst) {
+    width: @contentWidth;
+  }
+  @media screen and (max-width: @breakPointFirst) and (min-width: @breakPointSecond) {
+    .product-image,
+    .product-info {
+      flex: 1 1;
+    }
+    width: @contentWidthBreakFirst;
+  }
+  @media screen and (max-width: @breakPointSecond) and (min-width: @breakPointThird) {
+    .product-image,
+    .product-info {
+      flex: 1 1;
+    }
+    width: @contentWidthBreakSecond;
+  }
+  @media screen and (max-width: @breakPointThird) {
+    width: @contentWidthBreakThird;
+  }
+  .product-image {
+    position: relative;
+    .badge {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: @campaignColor;
+      color: #fff;
+      z-index: 5;
+      font-size: 1rem;
+      padding: 1rem;
+    }
+  }
+  .product-info {
+    padding: 0 @defaultPadding;
+    .price-container {
+      .price {
+        color: @priceColor;
+        font-size: 2rem;
+        font-weight: @fontWeightMedium;
+        &.discount {
+          color: @campaignColor;
+        }
+      }
+      .regular-price {
+        text-decoration: line-through;
+        color: @regularPriceColor;
+      }
+    }
+    @media screen and (max-width: @breakPointThird) {
+      padding: @defaultPadding;
+    }
+  }
+}

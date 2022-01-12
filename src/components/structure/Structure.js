@@ -1,22 +1,27 @@
-import React from "react"
+import React, { useState } from "react"
 import { Helmet } from "react-helmet"
 import { siteData } from "../../data/site/sitedata"
 import Header from "../header/Header"
 import Navigation from "../navigations/navigation/Navigation"
 import SideBar from "../sidebar/Side-Bar"
-import Content from "../content/Content"
 import SideBarOverlay from "../sidebar/Side-Bar-Overlay"
+import InstagramWidget from "../controls/instagramWidget/Instagram-Widget"
 import Footer from "../footer/Footer"
 import "../../styles/base.less"
-import "./Structure.less"
+import * as style from "./structure.module.less"
 
-export default function Structure({ children }) {
+export default function Structure({ children, hideInstagram }) {
+  const [isOpen, setIsOpen] = useState(false)
   return (
     <>
       <Helmet>
         <meta name="description" content={siteData.description} />
         <meta property="og:title" content={siteData.name} />
         <meta property="og:image" content={siteData.ogImage} />
+        <script
+          async
+          src="https://cdn.lightwidget.com/widgets/lightwidget.js"
+        ></script>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -39,25 +44,29 @@ export default function Structure({ children }) {
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="theme-color" content="#ffffff" />
       </Helmet>
-      <div id="wrapper">
-        <div id="main">
-          <Header />
+      <div id={style.wrapper}>
+        <div id={style.main}>
+          <Header isOpen={isOpen} setIsOpen={setIsOpen} />
           <Navigation
-            type="horizontal"
-            class="main-navigation"
-            menu="mainMenu"
+            horizontal={true}
+            className={style.mainNavigation}
+            menuName="mainMenu"
           />
-          <Content>{children}</Content>
+          <div id={style.content}>
+            {children}
+            {hideInstagram ? null : (
+              <InstagramWidget
+                lightWidgetId={"b030bd5dd1da52e9b2ae3d4e060d4178"}
+                title={"Senaste från Instagram @sebladkeramik"}
+              />
+            )}
+          </div>
           <Footer />
         </div>
-        <SideBar type="left">
-          <Navigation
-            type="vertical"
-            class="sidebar-navigation"
-            menu="mainMenu"
-          />
+        <SideBar isOpen={isOpen} setIsOpen={setIsOpen} type="left">
+          <Navigation menuName="mainMenu" />
         </SideBar>
-        <SideBarOverlay />
+        <SideBarOverlay isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
     </>
   )

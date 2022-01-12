@@ -1,0 +1,29 @@
+@import "../../styles/variables.less";
+
+.button {
+  outline: none;
+  appearance: none;
+  border: 0;
+  font-size: @fontSize;
+  padding: 0.8rem 1.3rem;
+  font-weight: @fontWeightMedium;
+  font-family: @defaultFont;
+  background: @primaryColor;
+  color: @secondaryColor;
+  transition: all ease-in-out 0.2s;
+  border: 1px solid @primaryColor;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+  cursor: pointer;
+  &:hover {
+    background: lighten(@primaryColor, 10%);
+    border-color: lighten(@primaryColor, 10%);
+  }
+  &-uppercase {
+    text-transform: uppercase;
+  }
+}

@@ -2,63 +2,28 @@ import React from "react"
 import ModalImage from "react-modal-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSearchPlus } from "@fortawesome/free-solid-svg-icons"
-import { Link } from "gatsby"
-import "./Img.less"
+import * as style from "./image.module.less"
 
-export default function Img({ headertag: Tag = "h2", ...props }) {
+export default function Img({ src, srcLarge, alt, height, width, popup }) {
   return (
     <>
-      {props.header && props.link ? (
-        <Link to={props.link}>
-          <div
-            className="resp-img"
-            style={{ backgroundImage: "url(" + props.src + ")" }}
-          >
-            <Tag
-              className="splash-header"
-              style={
-                props.shadow
-                  ? { textShadow: "0px 0px 18px #000", color: props.color }
-                  : { color: props.color }
-              }
-            >
-              {props.header}
-            </Tag>
-          </div>
-        </Link>
-      ) : props.header ? (
-        <div
-          className="resp-img"
-          style={{ backgroundImage: "url(" + props.src + ")" }}
-        >
-          <Tag
-            className="splash-header"
-            style={
-              props.shadow
-                ? { textShadow: "0px 0px 18px #000", color: props.color }
-                : { color: props.color }
-            }
-          >
-            {props.header}
-          </Tag>
-        </div>
-      ) : props.popup ? (
-        <div className="resp-img popup">
+      {popup ? (
+        <div className={[style.respImg, style.popup].join(" ")}>
           <ModalImage
-            className="resp-img-popup"
-            small={props.src}
-            large={props.srcLarge ? props.srcLarge : props.src}
-            alt={props.alt}
+            className={style.respImgPopup}
+            small={src}
+            large={srcLarge ? srcLarge : src}
+            alt={alt}
           />
           <FontAwesomeIcon icon={faSearchPlus} color="#FFF" />
         </div>
       ) : (
-        <div className="resp-img">
+        <div className={style.respImg}>
           <img
-            src={props.src}
-            height={props.height}
-            width={props.width}
-            alt={props.alt ? props.alt : "Bild"}
+            src={src}
+            height={height}
+            width={width}
+            alt={alt ? alt : "Bild"}
           />
         </div>
       )}

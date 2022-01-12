@@ -1,0 +1,15 @@
+@import "../../../styles/variables.less";
+.video-container {
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  video {
+    height: 100%;
+    object-fit: cover;
+  }
+  &.hide-in-mobile {
+    @media screen and (max-width: @breakPointThird) {
+      display: none;
+    }
+  }
+}
