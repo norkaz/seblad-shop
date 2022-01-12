@@ -12,13 +12,11 @@ export default function NotFound() {
         <meta property="og:type" content="404" />
       </Helmet>
       <Structure>
-        <div className="text-box">
-          <h1>Hoppsan! Sidan du försökte gå till hittades inte</h1>
-          <p>
-            Gå till <Link to="/products">produkter</Link> eller till{" "}
-            <Link to="/">startsidan</Link>.
-          </p>
-        </div>
+        <h1>Hoppsan! Sidan du försökte gå till hittades inte</h1>
+        <p>
+          Gå till <Link to="/products">produkter</Link> eller till{" "}
+          <Link to="/">startsidan</Link>.
+        </p>
       </Structure>
     </>
   )
