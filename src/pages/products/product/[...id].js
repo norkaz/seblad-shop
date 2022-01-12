@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet"
 import { products } from "../../../data/products/products"
 import { siteData } from "../../../data/site/sitedata"
 import Structure from "../../../components/structure/Structure"
+import ImageBanner from "../../../components/controls/imageBanner/Image-Banner"
 import Img from "../../../components/controls/img/Img"
 import Grid from "../../../components/gridLayout/grid/Grid"
 import Widget from "../../../components/gridLayout/widget/Widget"
@@ -35,6 +36,17 @@ export default function Product(props) {
           <meta property="og:type" content="content-page" />
         </Helmet>
         <Structure hideInstagram={false}>
+          <ImageBanner
+            src={[
+              "https://facegram.se/CDNproducts/articlenumbers/",
+              product.artNr,
+              "_XL.jpg",
+            ].join("")}
+            header={product.name}
+            headertag="h1"
+            color="#FFF"
+            shadow={true}
+          />
           <div className={style.product}>
             <div className={style.productImage}>
               {savingPrice ? (

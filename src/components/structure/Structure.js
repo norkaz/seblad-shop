@@ -51,7 +51,11 @@ export default function Structure({ children, hideInstagram }) {
           <Header isOpen={isOpen} setIsOpen={setIsOpen} />
           <Navigation
             horizontal={true}
-            className={style.mainNavigation}
+            containerClassName={style.mainNavigation}
+            ulClassName={style.menu}
+            liClassName={style.menuItem}
+            linkClassName={style.menuItemLink}
+            linkActiveClassName={style.active}
             menuName="mainMenu"
           />
           <div id={style.content}>
@@ -70,7 +74,14 @@ export default function Structure({ children, hideInstagram }) {
           <Footer />
         </div>
         <SideBar isOpen={isOpen} setIsOpen={setIsOpen} type="left">
-          <Navigation menuName="mainMenu" />
+          <Navigation
+            containerClassName={style.sideBarNavigation}
+            ulClassName={style.menu}
+            liClassName={style.menuItem}
+            linkClassName={style.menuItemLink}
+            linkActiveClassName={style.active}
+            menuName="mainMenu"
+          />
         </SideBar>
         <SideBarOverlay isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>

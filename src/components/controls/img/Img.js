@@ -17,7 +17,11 @@ export default function Img({ src, srcLarge, alt, height, width, popup }) {
             large={srcLarge ? srcLarge : src}
             alt={alt}
           />
-          <FontAwesomeIcon icon={faSearchPlus} color="#FFF" />
+          <FontAwesomeIcon
+            icon={faSearchPlus}
+            className={style.searchIcon}
+            color="#FFF"
+          />
         </div>
       ) : (
         <div className={style.respImg}>

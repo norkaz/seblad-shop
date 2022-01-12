@@ -17,35 +17,47 @@ export default function Home() {
       <Structure>
         <Grid isFull={true}>
           <Widget>
-            <Img src="https://facegram.se/CDN/9-2.jpg" />
+            <Img
+              src={"https://facegram.se/CDN/9-2.jpg"}
+              alt={"https://facegram.se/CDN/9-2.jpg"}
+            />
           </Widget>
           <Widget>
-            <Img src="https://facegram.se/CDN/19-2.jpg" />
+            <Img
+              src={"https://facegram.se/CDN/19-2.jpg"}
+              alt={"https://facegram.se/CDN/19-2.jpg"}
+            />
           </Widget>
           <Widget>
-            <Img src="https://facegram.se/CDN/20-2.jpg" />
+            <Img
+              src={"https://facegram.se/CDN/20-2.jpg"}
+              alt={"https://facegram.se/CDN/20-2.jpg"}
+            />
           </Widget>
         </Grid>
         <Grid>
           <Widget>
             <Img
               popup={true}
-              src="https://facegram.se/CDN/12-2.jpg"
-              srcLarge="https://facegram.se/CDN/12-2_L.jpg"
+              src={"https://facegram.se/CDN/12-2.jpg"}
+              srcLarge={"https://facegram.se/CDN/12-2_L.jpg"}
+              alt={"https://facegram.se/CDN/12-2_L.jpg"}
             />
           </Widget>
           <Widget>
             <Img
               popup={true}
-              src="https://facegram.se/CDN/1-2.jpg"
-              srcLarge="https://facegram.se/CDN/1-2_L.jpg"
+              src={"https://facegram.se/CDN/1-2.jpg"}
+              srcLarge={"https://facegram.se/CDN/1-2_L.jpg"}
+              alt={"https://facegram.se/CDN/1-2_L.jpg"}
             />
           </Widget>
           <Widget>
             <Img
               popup={true}
-              src="https://facegram.se/CDN/8-2.jpg"
-              srcLarge="https://facegram.se/CDN/8-2_L.jpg"
+              src={"https://facegram.se/CDN/8-2.jpg"}
+              srcLarge={"https://facegram.se/CDN/8-2_L.jpg"}
+              alt={"https://facegram.se/CDN/8-2_L.jpg"}
             />
           </Widget>
         </Grid>
