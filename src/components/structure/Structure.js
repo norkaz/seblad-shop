@@ -2,6 +2,8 @@ import React, { useState } from "react"
 import { Helmet } from "react-helmet"
 import { siteData } from "../../data/site/sitedata"
 import Header from "../header/Header"
+import Grid from "../gridLayout/grid/Grid"
+import Widget from "../gridLayout/widget/Widget"
 import Navigation from "../navigations/navigation/Navigation"
 import SideBar from "../sidebar/Side-Bar"
 import SideBarOverlay from "../sidebar/Side-Bar-Overlay"
@@ -49,22 +51,37 @@ export default function Structure({ children, hideInstagram }) {
           <Header isOpen={isOpen} setIsOpen={setIsOpen} />
           <Navigation
             horizontal={true}
-            className={style.mainNavigation}
+            containerClassName={style.mainNavigation}
+            ulClassName={style.menu}
+            liClassName={style.menuItem}
+            linkClassName={style.menuItemLink}
+            linkActiveClassName={style.active}
             menuName="mainMenu"
           />
           <div id={style.content}>
             {children}
             {hideInstagram ? null : (
-              <InstagramWidget
-                lightWidgetId={"b030bd5dd1da52e9b2ae3d4e060d4178"}
-                title={"Senaste från Instagram @sebladkeramik"}
-              />
+              <Grid>
+                <Widget>
+                  <InstagramWidget
+                    lightWidgetId={"b030bd5dd1da52e9b2ae3d4e060d4178"}
+                    title={"Senaste från Instagram @sebladkeramik"}
+                  />
+                </Widget>
+              </Grid>
             )}
           </div>
           <Footer />
         </div>
         <SideBar isOpen={isOpen} setIsOpen={setIsOpen} type="left">
-          <Navigation menuName="mainMenu" />
+          <Navigation
+            containerClassName={style.sideBarNavigation}
+            ulClassName={style.menu}
+            liClassName={style.menuItem}
+            linkClassName={style.menuItemLink}
+            linkActiveClassName={style.active}
+            menuName="mainMenu"
+          />
         </SideBar>
         <SideBarOverlay isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>

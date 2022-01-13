@@ -1,9 +1,10 @@
 import React from "react"
 import * as style from "./button.module.less"
 
-export default function Button({ text, className, type, uppercase }) {
+export default function Button({ text, className, type, uppercase, onClick }) {
   return (
     <button
+      onClick={onClick}
       className={[
         className,
         style.button,

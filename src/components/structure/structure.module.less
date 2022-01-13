@@ -2,9 +2,6 @@
 
 #wrapper {
   height: 100%;
-  .pro-sidebar {
-    position: fixed;
-  }
 }
 #main {
   background: @backgroundColor;
@@ -17,7 +14,6 @@
     z-index: 10;
     top: 0;
     background: @navbarBackgroundColor;
-    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,6 +24,22 @@
     @media screen and (max-width: @breakPointThird) {
       display: none;
     }
+    .menu {
+      .menu-item {
+        padding: 0;
+        .menu-item-link {
+          padding: 1rem;
+          font-size: 1.1rem;
+          color: @linkColor;
+          font-weight: @fontWeightMedium;
+          &.active {
+            text-decoration: none;
+            color: @navbarTextColor;
+            background: @borderColor;
+          }
+        }
+      }
+    }
   }
 
   #content {
@@ -35,5 +47,20 @@
     height: 100%;
     overflow: hidden;
     margin-bottom: auto;
+  }
+}
+.side-bar-navigation {
+  .menu {
+    .menu-item {
+      .menu-item-link {
+        padding: 1rem;
+        font-size: 1.1rem;
+        &.active {
+          text-decoration: none;
+          color: @navbarTextColor;
+          background: @borderColor;
+        }
+      }
+    }
   }
 }

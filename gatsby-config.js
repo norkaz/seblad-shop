@@ -9,7 +9,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-less`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-csv`,
     /*HTML*/
     {
       resolve: "gatsby-plugin-html-attributes",

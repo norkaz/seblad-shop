@@ -19,7 +19,11 @@ export default function Footer() {
           <div className={style.menuBox}>
             <Navigation
               classType={"vertical"}
-              className={style.footerNavigation}
+              containerClassName={style.footerNavigation}
+              ulClassName={style.menu}
+              liClassName={style.menuItem}
+              linkClassName={style.menuItemLink}
+              linkActiveClassName={style.active}
               menuName={"mainMenu"}
             />
           </div>

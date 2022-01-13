@@ -10,7 +10,14 @@
     .menu-box {
       padding: 0 @defaultPadding;
       .footer-navigation {
-        padding-top: @defaultPadding;
+        .menu {
+          .menu-item {
+            padding-bottom: 1rem;
+            .menu-item-link {
+              font-weight: @fontWeightMedium;
+            }
+          }
+        }
       }
       .social-media {
         white-space: nowrap;
