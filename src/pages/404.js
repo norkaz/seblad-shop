@@ -12,7 +12,8 @@ export default function NotFound() {
         <meta property="og:type" content="404" />
       </Helmet>
       <Structure>
-        <h1>Hoppsan! Sidan du försökte gå till hittades inte</h1>
+        <h1>404 Page not found</h1>
+        <h2>Hoppsan! Sidan du försökte gå till hittades inte</h2>
         <p>
           Gå till <Link to="/products">produkter</Link> eller till{" "}
           <Link to="/">startsidan</Link>.
