@@ -117,30 +117,31 @@ export default function BuyForm({
           <Input hidden name="summa" />
           <Input hidden name="rabatt" />
           <div className={style.buyQuantity}>
-            <div className={style.quantity}>
-              <input
-                type="number"
-                min="1"
-                max="10"
-                name="amount"
-                value={amount}
-                onChange={event => setAmount(event.target.value)}
-                className={[style.quantityField, style.formInput].join(" ")}
-              />
-              St
+            <div className={style.quantityWrapper}>
+              <Button
+                text={"-"}
+                type={"button"}
+                className={style.quantityButton}
+                onClick={() => setAmount(amount > 1 ? --amount : amount)}
+              ></Button>
+              <div className={style.quantity}>
+                <input
+                  type="number"
+                  min="1"
+                  max="10"
+                  name="amount"
+                  value={amount}
+                  onChange={event => setAmount(event.target.value)}
+                  className={[style.quantityField, style.formInput].join(" ")}
+                />
+              </div>
+              <Button
+                text={"+"}
+                type={"button"}
+                className={style.quantityButton}
+                onClick={() => setAmount(++amount)}
+              ></Button>
             </div>
-            <Button
-              text={"-"}
-              type={"button"}
-              className={style.quantityButton}
-              onClick={() => setAmount(--amount)}
-            ></Button>
-            <Button
-              text={"+"}
-              type={"button"}
-              className={style.quantityButton}
-              onClick={() => setAmount(++amount)}
-            ></Button>
             <Input hidden name={"totalsumma"} />
             <Button
               text={"Beställ"}

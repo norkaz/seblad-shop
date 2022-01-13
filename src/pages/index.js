@@ -9,12 +9,12 @@ import Img from "../components/controls/img/Img"
 export default function Home() {
   return (
     <>
-      <Helmet>
-        <title>{siteData.name} - Hem </title>
-        <meta property="og:type" content="content-page" />
-        <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
-      </Helmet>
       <Structure>
+        <Helmet>
+          <title>{siteData.name} - Hem </title>
+          <meta property="og:type" content="content-page" />
+          <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+        </Helmet>
         <Grid isFull={true}>
           <Widget>
             <Img
