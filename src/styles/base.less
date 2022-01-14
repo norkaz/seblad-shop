@@ -23,7 +23,16 @@ body {
   background: @backgroundColor;
   margin: 0;
   font-size: 1rem;
-  overflow-x: hidden;
+  min-height: 100vh;
+  body {
+    min-height: 100vh;
+  }
+  #___gatsby {
+    min-height: 100vh;
+    > div {
+      min-height: 100vh;
+    }
+  }
 }
 p a {
   color: var(--linkColor);

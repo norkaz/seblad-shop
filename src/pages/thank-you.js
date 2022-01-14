@@ -8,7 +8,7 @@ import Widget from "../components/gridLayout/widget/Widget"
 export default function Home() {
   return (
     <>
-      <Structure>
+      <Structure hideInstagram={true}>
         <Helmet>
           <title>{siteData.name} - Tack för ditt meddelande </title>
           <meta property="og:type" content="content-page" />
