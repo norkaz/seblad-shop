@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet"
 import { siteData } from "../../data/site/sitedata"
 import Header from "../header/Header"
 import Grid from "../gridLayout/grid/Grid"
+import StickyWrapper from "../controls/stickyWrapper/Sticky-Wrapper"
 import Widget from "../gridLayout/widget/Widget"
 import Navigation from "../navigations/navigation/Navigation"
 import SideBar from "../sidebar/Side-Bar"
@@ -48,7 +49,9 @@ export default function Structure({ children, hideInstagram }) {
       </Helmet>
       <div id={style.wrapper}>
         <div id={style.main}>
-          <Header isOpen={isOpen} setIsOpen={setIsOpen} />
+          <StickyWrapper>
+            <Header isOpen={isOpen} setIsOpen={setIsOpen} />
+          </StickyWrapper>
           <Navigation
             horizontal={true}
             containerClassName={style.mainNavigation}
