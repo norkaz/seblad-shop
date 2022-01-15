@@ -127,8 +127,8 @@ export default function BuyForm({
               <div className={style.quantity}>
                 <input
                   type="number"
-                  min="1"
-                  max="10"
+                  min={"1"}
+                  max={product.stock}
                   name="amount"
                   value={amount}
                   onChange={event => setAmount(event.target.value)}
@@ -139,13 +139,16 @@ export default function BuyForm({
                 text={"+"}
                 type={"button"}
                 className={style.quantityButton}
-                onClick={() => setAmount(++amount)}
+                onClick={() =>
+                  setAmount(amount < product.stock ? ++amount : amount)
+                }
               ></Button>
             </div>
             <Input hidden name={"totalsumma"} />
             <Button
               text={"Beställ"}
               uppercase={true}
+              disabled={product.stock >= 1 ? false : true}
               type={"submit"}
               className={style.buyButton}
             />
