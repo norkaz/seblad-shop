@@ -9,6 +9,8 @@ import Grid from "../../gridLayout/grid/Grid"
 import Widget from "../../gridLayout/widget/Widget"
 import BuyForm from "../buyForm/Buy-Form"
 import ShopWindow from "../shopWindow/Shop-Window"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faTimes, faCheck } from "@fortawesome/free-solid-svg-icons"
 import * as style from "./product.module.less"
 
 export default function Product({ splat }) {
@@ -45,6 +47,22 @@ export default function Product({ splat }) {
               {product.price * amount} {product.currency}
             </span>
           </>
+        )}
+      </>
+    )
+  }
+  function productStock() {
+    return (
+      <>
+        {product.stock < 1 ? (
+          <div className={[style.stock, style.outOfStock].join(" ")}>
+            <FontAwesomeIcon icon={faTimes} /> Slut i lager{" "}
+          </div>
+        ) : (
+          <div className={[style.stock, style.inStock].join(" ")}>
+            {" "}
+            <FontAwesomeIcon icon={faCheck} /> {product.stock} kvar i lager
+          </div>
         )}
       </>
     )
@@ -102,6 +120,9 @@ export default function Product({ splat }) {
             <div className={[style.priceContainer, "hide-mobile"].join(" ")}>
               {productPrice()}
             </div>
+            <div className={[style.stockInfo, "hide-mobile"].join(" ")}>
+              {productStock()}
+            </div>
             <BuyForm
               totalPrice={totalPrice}
               product={product}
@@ -110,6 +131,9 @@ export default function Product({ splat }) {
               amount={amount}
               setAmount={setAmount}
             />
+            <div className={[style.stockInfo, "only-mobile"].join(" ")}>
+              {productStock()}
+            </div>
             <div className={[style.priceContainer, "only-mobile"].join(" ")}>
               {productPrice()}
             </div>
