@@ -11,11 +11,11 @@ import ShopWindow from "../components/controls/shopWindow/Shop-Window"
 export default function Home() {
   return (
     <>
-      <Helmet>
-        <title>{siteData.name} - Produkter </title>
-        <meta property="og:type" content="content-page" />
-      </Helmet>
       <Structure>
+        <Helmet>
+          <title>{siteData.name} - Produkter </title>
+          <meta property="og:type" content="content-page" />
+        </Helmet>
         <ImageBanner
           src="https://facegram.se/CDN/13-2.jpg"
           header="Produkter"

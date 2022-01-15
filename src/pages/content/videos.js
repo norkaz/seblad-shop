@@ -9,11 +9,11 @@ import Video from "../../components/controls/video/Video"
 export default function Videos() {
   return (
     <>
-      <Helmet>
-        <title>{siteData.name} - Filmer </title>
-        <meta property="og:type" content="content-page" />
-      </Helmet>
       <Structure>
+        <Helmet>
+          <title>{siteData.name} - Filmer </title>
+          <meta property="og:type" content="content-page" />
+        </Helmet>
         <Grid>
           <Widget>
             <Video

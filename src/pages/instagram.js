@@ -9,11 +9,11 @@ import InstagramWidget from "../components/controls/instagramWidget/Instagram-Wi
 export default function Instagram() {
   return (
     <>
-      <Helmet>
-        <title>{siteData.name} - Instagram </title>
-        <meta property="og:type" content="content-page" />
-      </Helmet>
       <Structure hideInstagram={true}>
+        <Helmet>
+          <title>{siteData.name} - Instagram </title>
+          <meta property="og:type" content="content-page" />
+        </Helmet>
         <Grid>
           <Widget>
             <InstagramWidget

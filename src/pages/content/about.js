@@ -11,11 +11,11 @@ import Img from "../../components/controls/img/Img"
 export default function About() {
   return (
     <>
-      <Helmet>
-        <title>{siteData.name} - Om mig</title>
-        <meta property="og:type" content="content-page" />
-      </Helmet>
       <Structure>
+        <Helmet>
+          <title>{siteData.name} - Om mig</title>
+          <meta property="og:type" content="content-page" />
+        </Helmet>
         <ImageBanner
           src="https://facegram.se/CDN/13-2.jpg"
           header="Om Seblad Keramik"

@@ -8,12 +8,12 @@ import Widget from "../components/gridLayout/widget/Widget"
 export default function Home() {
   return (
     <>
-      <Helmet>
-        <title>{siteData.name} - Tack för ditt meddelande </title>
-        <meta property="og:type" content="content-page" />
-        <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
-      </Helmet>
-      <Structure>
+      <Structure hideInstagram={true}>
+        <Helmet>
+          <title>{siteData.name} - Tack för ditt meddelande </title>
+          <meta property="og:type" content="content-page" />
+          <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+        </Helmet>
         <Grid>
           <Widget>
             <div className="text-box">

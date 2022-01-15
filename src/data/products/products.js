@@ -10,6 +10,7 @@ export const products = [
     currency: "SEK",
     discountPercent: 34,
     discountBadge: "REA",
+    stock: 3,
   },
   {
     id: "2",
@@ -21,6 +22,7 @@ export const products = [
     currency: "SEK",
     discountPercent: 0,
     discountBadge: null,
+    stock: 6,
   },
   {
     id: "3",
@@ -32,6 +34,7 @@ export const products = [
     currency: "SEK",
     discountPercent: 0,
     discountBadge: null,
+    stock: 2,
   },
   {
     id: "4",
@@ -44,6 +47,7 @@ export const products = [
     currency: "SEK",
     discountPercent: 0,
     discountBadge: null,
+    stock: 4,
   },
   {
     id: "5",
@@ -55,6 +59,7 @@ export const products = [
     currency: "SEK",
     discountPercent: 0,
     discountBadge: null,
+    stock: 7,
   },
   {
     id: "6",
@@ -66,5 +71,6 @@ export const products = [
     currency: "SEK",
     discountPercent: 0,
     discountBadge: null,
+    stock: 5,
   },
 ]
