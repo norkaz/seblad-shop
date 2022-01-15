@@ -10,7 +10,7 @@ export const products = [
     currency: "SEK",
     discountPercent: 34,
     discountBadge: "REA",
-    stock: 3,
+    stock: 0,
   },
   {
     id: "2",

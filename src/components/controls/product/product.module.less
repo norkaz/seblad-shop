@@ -63,6 +63,22 @@
         color: @regularPriceColor;
       }
     }
+    .stock-info {
+      font-weight: @fontWeightMedium;
+      padding-bottom: @defaultPadding;
+      font-size: 1.1rem;
+      .stock {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        &.out-of-stock {
+          color: @outOfStockColor;
+        }
+        &.in-stock {
+          color: @inStockColor;
+        }
+      }
+    }
     @media screen and (max-width: @breakPointThird) {
       padding: @defaultPadding;
     }
